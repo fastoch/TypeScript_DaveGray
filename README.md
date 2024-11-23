@@ -40,22 +40,27 @@ https://survey.stackoverflow.co/2024/technology/
   - npm = Node Package Manager
 - That doesn't mean we're going to necessarily write any Node.js, although we could.
 
-## Prerequisites
+## First TypeScript Project
 
 - open a terminal windows in VS code by pressing Ctrl + J
 - assuming you already installed the nodejs package and can now use npm, use the following cmd to install TypeScript:
   - `npm i typescript -g`
   - the `-g` flag is for 'global', which means you want to install a npm module globally
 
-Then, let's create some files in VS code file tree.  
+Then, let's create some files in VS code file tree (cf. LESSON01).  
 
+To compile TypeScript files into JavaScript from the terminal: `tsc main.ts`  
+This will create a .js file, in our case a main.js file.  
 
-
+Every time we make a change in our main.ts file, we need to recompile via the `tsc` command.  
+To not having to do that with every change, we can run this cmd: `tsc main.ts -w`  
+This will run the typescript compiler in **watch** mode, watching for any file changes.  
 
 
 
 # Chapter 2
 
 
+
 ---
-@5:00
+@10:00
