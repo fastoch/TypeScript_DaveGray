@@ -82,7 +82,7 @@ Here's the typical structure of a basic TS project:
 ## tsconfig.json
 
 > [!IMPORTANT]
-> **But how can we get TypeScript to know all of our .ts files are in the 'src' directory?**  
+> **How can we get TypeScript to know all of our .ts files are in the 'src' directory?**  
 > **And how does it know where to put the compiled files?**  
 > To "inform" TypeScript about our project structure, we use a **tsconfig.json** file.  
 > To create this config file, run this cmd from the terminal: `tsc --init`  
@@ -90,10 +90,10 @@ Here's the typical structure of a basic TS project:
 The `tsc --init` command is a widely used method to initialize TypeScript projects and create a **tsconfig.json** file.  
 
 In the **tsconfig.json** file, uncomment the `rootDir` line to specify the root folder within your source files:
-- `"rootDir": "./src",`  
+- `"rootDir": "./src"`  
 
 Then, uncomment the `outDir` line to specify the output folder for all emitted files:
-- `"outDir": "./build/js",`
+- `"outDir": "./build/js"`
 
 These settings will let the TypeScript compiler (tsc) know:
 - where to look for .ts files (input)
@@ -102,11 +102,19 @@ These settings will let the TypeScript compiler (tsc) know:
 Now we can simply run `tsc -w` to automate the compilation of our .ts files (start compilation in watch mode).  
 This will create the 'js' folder inside our 'build' folder if not already existing.  
 
-And if create a new .ts file, this will automatically create the corresponding .js file.
+And if create a new .ts file, this will automatically create the corresponding .js file.  
+But if I delete a .ts file, this will not delete the matching .js file.  
+
+Another important setting within our **tsconfig.json** file is `"target"`.  
+This setting allows us to set the JS language version for emitted JavaScript files.  
+The default setting in 2024 is still: `"target": "es2016"`, which stands for **Ecmascript 2016**.  
+
+To prevent the TS compiler from automatically compiling files created anywhere else than inside our 'src' folder,  
+
 
 # Chapter 2
 
 
 
 ---
-@14:00
+@16:00
