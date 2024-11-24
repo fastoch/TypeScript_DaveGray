@@ -75,7 +75,10 @@ Here's the typical structure of a basic TS project:
 > **But how can we get TypeScript to know all of our .ts files are in the 'src' directory?**  
 > **And how does it know where to put the compiled files?**  
 > To "inform" TypeScript about our project structure, we use a **tsconfig.json** file.  
-> To create this config file, run this cmd from the terminal: `tsc --init`
+> To create this config file, run this cmd from the terminal: `tsc --init`  
+
+The `tsc --init` command is a widely used method for initializing TypeScript projects and creating a **tsconfig.json** file.  
+
 
 # Chapter 2
 
