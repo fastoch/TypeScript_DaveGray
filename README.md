@@ -105,11 +105,27 @@ This will create the 'js' folder inside our 'build' folder if not already existi
 And if create a new .ts file, this will automatically create the corresponding .js file.  
 But if I delete a .ts file, this will not delete the matching .js file.  
 
+---
+
 Another important setting within our **tsconfig.json** file is `"target"`.  
 This setting allows us to set the JS language version for emitted JavaScript files.  
 The default setting in 2024 is still: `"target": "es2016"`, which stands for **Ecmascript 2016**.  
 
-To prevent the TS compiler from automatically compiling files created anywhere else than inside our 'src' folder,  
+---
+
+If we create a .ts file outside of our 'src' folder, this will also compile and create a .js file.  
+To prevent this behavior and ignore any .ts file created outside of the 'src' directory, we need to add the  
+following "include" setting at the very bottom of our **tsconfig.json** file:  
+```json
+    ...
+    "skipLibCheck": true    
+  },
+  "include": [
+    "src"
+  ]
+}
+```  
+
 
 
 # Chapter 2
@@ -117,4 +133,4 @@ To prevent the TS compiler from automatically compiling files created anywhere e
 
 
 ---
-@16:00
+@19:00
