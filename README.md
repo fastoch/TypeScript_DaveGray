@@ -40,7 +40,7 @@ https://survey.stackoverflow.co/2024/technology/
   - npm = Node Package Manager
 - That doesn't mean we're going to necessarily write any Node.js, although we could.
 
-## First TypeScript Project
+## Install TypeScript and run the TS compiler
 
 - open a terminal windows in VS code by pressing Ctrl + J
 - assuming you already installed the nodejs package and can now use npm, use the following cmd to install TypeScript:
@@ -56,6 +56,25 @@ Every time we make a change in our main.ts file, we need to recompile via the `t
 To not having to do that with every change, we can run this cmd: `tsc main.ts -w`  
 This will run the typescript compiler in **watch** mode, watching for any file changes.  
 
+## TS Project structure
+
+- Typically, in a TypeScript project, you should have a **src** folder directly inside the project folder.  
+- And usually, you would also find a **build** folder inside your project folder.
+
+The 'build' folder is where we would have our compiled code, meaning a JS folder and .js files.  
+This 'build folder would also include our .html files and .css files.  
+
+And our "raw" code would be stored in the 'src' folder, including our .ts files.  
+
+---
+
+Here's the typical structure of a basic TS project:  
+![TS project structure](image-1.png)  
+
+**But how can we get TypeScript to know all of our .ts files are in the 'src' directory?**  
+**And how does it know where to put the compiled files?**  
+
+To "inform" TypeScript about our project structure, we use a **typescript.config** file.  
 
 
 # Chapter 2
@@ -63,4 +82,4 @@ This will run the typescript compiler in **watch** mode, watching for any file c
 
 
 ---
-@10:00
+@12:00
