@@ -71,11 +71,12 @@ And our "raw" code would be stored in the 'src' folder, including our .ts files.
 Here's the typical structure of a basic TS project:  
 ![TS project structure](image-1.png)  
 
-**But how can we get TypeScript to know all of our .ts files are in the 'src' directory?**  
-**And how does it know where to put the compiled files?**  
+> [!IMPORTANT]
+> **But how can we get TypeScript to know all of our .ts files are in the 'src' directory?**  
+> **And how does it know where to put the compiled files?**  
 
-To "inform" TypeScript about our project structure, we use a **typescript.config** file.  
-
+> To "inform" TypeScript about our project structure, we use a **tsconfig.json** file.  
+> To create this config file, run this cmd from the terminal: `tsc --init`
 
 # Chapter 2
 
