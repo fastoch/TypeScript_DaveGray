@@ -35,17 +35,27 @@ https://survey.stackoverflow.co/2024/technology/
 
 ## Required Tools
 
-- TS is integrated into Visual Studio Code very nicely.  
-- After that, you need **npm**, which you can get by installing **Node.js**
-  - npm = Node Package Manager
-- That doesn't mean we're going to necessarily write any Node.js, although we could.
+TypeScript is integrated into Visual Studio Code very nicely.  
+
+First, you need to install the following packages:
+  - **npm**
+  - **nodejs**
+
+> [!note]
+> npm = Node Package Manager  
+
+That doesn't mean we're going to necessarily write any Node.js (backend), although we could.  
+In this tutorial, we will actually focus on frontend and we'll use the React framework.
 
 ## Install TypeScript and run the TS compiler
 
 - open a terminal windows in VS code by pressing Ctrl + J
-- assuming you already installed the nodejs package and can now use npm, use the following cmd to install TypeScript:
-  - `npm i typescript -g`
-  - the `-g` flag is for 'global', which means you want to install a npm module globally
+- assuming you already installed the nodejs and npm packages, use the following cmd to install TypeScript:
+  - `npm install -g typescript`
+  - the `-g` flag is for installing a npm module globally
+
+Verify the installation by checking the TypeScript version:  
+`npx tsc --version`
 
 Then, let's create some files in VS code file tree (cf. LESSON01).  
 
