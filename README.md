@@ -76,10 +76,10 @@ This 'build folder would also include our .html files and .css files.
 
 And our "raw" code would be stored in the 'src' folder, including our .ts files.  
 
----
-
 Here's the typical structure of a basic TS project:  
 ![TS project structure](image-1.png)  
+
+## tsconfig.json
 
 > [!IMPORTANT]
 > **But how can we get TypeScript to know all of our .ts files are in the 'src' directory?**  
@@ -87,12 +87,26 @@ Here's the typical structure of a basic TS project:
 > To "inform" TypeScript about our project structure, we use a **tsconfig.json** file.  
 > To create this config file, run this cmd from the terminal: `tsc --init`  
 
-The `tsc --init` command is a widely used method for initializing TypeScript projects and creating a **tsconfig.json** file.  
+The `tsc --init` command is a widely used method to initialize TypeScript projects and create a **tsconfig.json** file.  
 
+In the **tsconfig.json** file, uncomment the `rootDir` line to specify the root folder within your source files:
+- `"rootDir": "./src",`  
+
+Then, uncomment the `outDir` line to specify the output folder for all emitted files:
+- `"outDir": "./build/js",`
+
+These settings will let the TypeScript compiler (tsc) know:
+- where to look for .ts files (input)
+- where to store compiled (.js) files (output)
+
+Now we can simply run `tsc -w` to automate the compilation of our .ts files (start compilation in watch mode).  
+This will create the 'js' folder inside our 'build' folder if not already existing.  
+
+And if create a new .ts file, this will automatically create the corresponding .js file.
 
 # Chapter 2
 
 
 
 ---
-@12:00
+@14:00
