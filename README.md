@@ -90,10 +90,10 @@ Here's the typical structure of a basic TS project:
 The `tsc --init` command is a widely used method to initialize TypeScript projects and create a **tsconfig.json** file.  
 
 In the **tsconfig.json** file, uncomment the `rootDir` line to specify the root folder within your source files:
-- `"rootDir": "./src"`  
+- `"rootDir": "./src",`  
 
 Then, uncomment the `outDir` line to specify the output folder for all emitted files:
-- `"outDir": "./build/js"`
+- `"outDir": "./build/js",`
 
 These settings will let the TypeScript compiler (tsc) know:
 - where to look for .ts files (input)
@@ -109,7 +109,7 @@ But if I delete a .ts file, this will not delete the matching .js file.
 
 Another important setting within our **tsconfig.json** file is `"target"`.  
 This setting allows us to set the JS language version for emitted JavaScript files.  
-The default setting in 2024 is still: `"target": "es2016"`, which stands for **Ecmascript 2016**.  
+The default setting in 2024 is still: `"target": "es2016",`, which stands for **Ecmascript 2016**.  
 
 ---
 
@@ -126,11 +126,18 @@ following "include" setting at the very bottom of our **tsconfig.json** file:
 }
 ```  
 
+## Data coercion
 
+JS would let you divide a number by a string because it automatically does type conversion when needed.  
+But TS won't let you do that because it's a strongly typed language. Therefore, you'll receive warning messages at compile time.  
+Being aware of type errors at compile time prevents us from facing errors at runtime. This is the reason why we need to use TS to write better code.  
+
+To prevent from compiling our TS code to JS code when having type errors, we can uncomment the following line in **tsconfig.json**:  
+- `"noEmitOnError": true,`  
 
 # Chapter 2
 
 
 
 ---
-@19:00
+@25:00
