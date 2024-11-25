@@ -135,9 +135,31 @@ Being aware of type errors at compile time prevents us from facing errors at run
 To prevent from compiling our TS code to JS code when having type errors, we can uncomment the following line in **tsconfig.json**:  
 - `"noEmitOnError": true,`  
 
-# Chapter 2
+# Chapter 2 - Basic types
+
+## Introduction
+
+Strongly typed languages demand the specification of data types. What a shock!  
+TypeScript is a strongly typed language where we specify the types of data that we're using.  
+That helps to **self-document** and **enforce** our code.  
+
+JavaScript, on the other hand, is a loosely typed language.  
+
+TS is a **statically typed** language. This means types are checked at compile time.  
+JS is a **dynamically typed** language. This means types are checked at run time.  
+
+But bear in mind that a strongly typed language can be either statically OR dynamically typed.  
+
+TS benefits include:
+- self-documenting code
+- catching errors during development (instead of while running the app)
+- great for teamwork
+
+## Writing TS code
+
+Our starter code today is the one we finished LESSON01 with. So we'll just rename LESSON01 to LESSON02.  
 
 
 
 ---
-@25:00
+@27:00
