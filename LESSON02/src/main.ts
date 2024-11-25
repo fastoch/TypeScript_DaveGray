@@ -13,4 +13,5 @@ console.log(a / b)
 
 // LESSON02
 
-
+let myName = 'John' // implicit type declaration (TS infers the data type)
+let yourName: string = 'Alice' // explicit type declaration

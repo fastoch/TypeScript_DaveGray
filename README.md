@@ -160,8 +160,10 @@ TS benefits include:
 Our starter code today is the one we finished LESSON01 with. So we'll just rename LESSON01 to LESSON02.  
 Before you start to write TS code, don't forget to start the TS compiler in watch mode via the `tsc -w` command.  
 
-
-
+Type declarations can be done implicitly, taking advantage of TS ability to infer the data type.  
+`let myName = 'Dave'`
+Or it can be done explicitly, by expressly specifying the type.
+`let myName: string = 'Dave'`
 
 ---
-@28:00
+@30:00
