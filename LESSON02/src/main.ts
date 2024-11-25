@@ -15,3 +15,12 @@ console.log(a / b)
 
 let myName = 'John' // implicit type declaration (TS infers the data type)
 let yourName: string = 'Alice' // explicit type declaration
+
+let meaningOfLife: number;
+let isLoading: boolean;
+
+let album: any;
+
+myName = 'Dave'
+meaningOfLife = 23
+isLoading = true

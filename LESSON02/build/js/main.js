@@ -10,3 +10,9 @@ console.log(a / b);
 // LESSON02
 let myName = 'John'; // implicit type declaration (TS infers the data type)
 let yourName = 'Alice'; // explicit type declaration
+let meaningOfLife;
+let isLoading;
+let album;
+myName = 'Dave';
+meaningOfLife = 23;
+isLoading = true;
