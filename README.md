@@ -158,8 +158,10 @@ TS benefits include:
 ## Writing TS code
 
 Our starter code today is the one we finished LESSON01 with. So we'll just rename LESSON01 to LESSON02.  
+Before you start to write TS code, don't forget to start the TS compiler in watch mode via the `tsc -w` command.  
+
 
 
 
 ---
-@27:00
+@28:00
