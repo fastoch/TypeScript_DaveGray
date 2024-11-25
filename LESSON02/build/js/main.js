@@ -16,3 +16,12 @@ let album;
 myName = 'Dave';
 meaningOfLife = 23;
 isLoading = true;
+album = 1983;
+album = 'She\'s so unusual';
+const sum = (a, b) => {
+    return a + b;
+};
+const concat = (a, b) => {
+    return a + ' ' + b;
+};
+let unionType;

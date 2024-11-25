@@ -24,3 +24,16 @@ let album: any;
 myName = 'Dave'
 meaningOfLife = 23
 isLoading = true
+
+album = 1983
+album = 'She\'s so unusual'
+
+const sum = (a: number, b: number) => {
+  return a + b
+}
+
+const concat = (a: string, b: string) => {
+  return a + ' ' + b
+}
+
+let unionType: number | string;
