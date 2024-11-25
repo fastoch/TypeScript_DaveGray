@@ -161,9 +161,13 @@ Our starter code today is the one we finished LESSON01 with. So we'll just renam
 Before you start to write TS code, don't forget to start the TS compiler in watch mode via the `tsc -w` command.  
 
 Type declarations can be done implicitly, taking advantage of TS ability to infer the data type.  
-`let myName = 'Dave'`
-Or it can be done explicitly, by expressly specifying the type.
-`let myName: string = 'Dave'`
+`let myName = 'Dave'`  
+
+Or it can be done explicitly, by expressly specifying the type.  
+`let myName: string = 'Dave'`  
+
+
+
 
 ---
-@30:00
+@31:00
