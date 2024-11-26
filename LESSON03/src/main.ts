@@ -1,4 +1,4 @@
-// LESSON01
+// // --------------------------LESSON01---------------------------------------
 
 let username = 'Dave'
 console.log(username)
@@ -9,9 +9,8 @@ let c: number = 2
 
 console.log(a / b) 
 
-// ----------------------------------------------------------------
 
-// LESSON02
+// --------------------------LESSON02----------------------------------------
 
 let myName = 'John' // implicit type declaration (TS infers the data type)
 let yourName: string = 'Alice' // explicit type declaration
@@ -42,3 +41,7 @@ let unionType: number | string;
 let regex = /\w+/g
 
 // It's completeley okay to take advantage of TS's type inference, but as we learn it's recommended to be explicit
+
+
+// --------------------------LESSON03 Arrays & Objects----------------------------------------
+
