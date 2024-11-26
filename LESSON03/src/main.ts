@@ -47,4 +47,6 @@ let regex = /\w+/g
 
 let stringArr: string[] = ['apple', 'banana', 'cherry']
 let numberArr: number[] = [1, 2, 3, 4, 5]
-let mixArr: (string | number)[] = ['apple', 1, 'banana', 2, 3]
+let mixedArr: (string | number | boolean)[] = ['apple', 1, 'banana', true, 3]
+
+stringArr[0] = 32

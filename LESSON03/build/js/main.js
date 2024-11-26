@@ -30,4 +30,5 @@ let regex = /\w+/g;
 // --------------------------LESSON03 Arrays & Objects----------------------------------------
 let stringArr = ['apple', 'banana', 'cherry'];
 let numberArr = [1, 2, 3, 4, 5];
-let mixArr = ['apple', 1, 'banana', 2, 3];
+let mixedArr = ['apple', 1, 'banana', true, 3];
+stringArr[0] = 'orange';
