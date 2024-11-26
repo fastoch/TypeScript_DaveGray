@@ -166,4 +166,6 @@ Type declarations can be done implicitly, taking advantage of TS ability to infe
 Or it can be done explicitly, by expressly specifying the type.  
 `let myName: string = 'Dave'`  
 
+It's completeley okay to take advantage of TS's type inference, but as we learn it's recommended to be explicit.
+
 

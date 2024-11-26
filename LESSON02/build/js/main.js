@@ -25,3 +25,6 @@ const concat = (a, b) => {
     return a + ' ' + b;
 };
 let unionType;
+// TS can recognize regular expressions, and it can infer the 'RegExp' type
+let regex = /\w+/g;
+// It's completeley okay to take advantage of TS's type inference, but as we learn it's recommended to be explicit
