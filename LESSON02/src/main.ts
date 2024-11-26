@@ -36,4 +36,8 @@ const concat = (a: string, b: string) => {
   return a + ' ' + b
 }
 
+<<<<<<< HEAD
 let unionType: number | string;
+=======
+let unionType: number | string;
+>>>>>>> a51b5e1453e56ce1698477eebc93c6f06fc6300d
