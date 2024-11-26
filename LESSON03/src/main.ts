@@ -45,3 +45,6 @@ let regex = /\w+/g
 
 // --------------------------LESSON03 Arrays & Objects----------------------------------------
 
+let stringArr: string[] = ['apple', 'banana', 'cherry']
+let numberArr: number[] = [1, 2, 3, 4, 5]
+let mixArr: (string | number)[] = ['apple', 1, 'banana', 2, 3]

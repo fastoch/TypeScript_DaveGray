@@ -28,3 +28,6 @@ let unionType;
 let regex = /\w+/g;
 // It's completeley okay to take advantage of TS's type inference, but as we learn it's recommended to be explicit
 // --------------------------LESSON03 Arrays & Objects----------------------------------------
+let stringArr = ['apple', 'banana', 'cherry'];
+let numberArr = [1, 2, 3, 4, 5];
+let mixArr = ['apple', 1, 'banana', 2, 3];
