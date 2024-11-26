@@ -31,4 +31,10 @@ let regex = /\w+/g;
 let stringArr = ['apple', 'banana', 'cherry'];
 let numberArr = [1, 2, 3, 4, 5];
 let mixedArr = ['apple', 1, 'banana', true, 3];
-stringArr[0] = 'orange';
+stringArr[0] = '32'; // add the string '32' at index 0, instead of 'apple'
+stringArr.push('orange'); // adds 'orange' to the end of the array
+console.log(stringArr);
+mixedArr[0] = 16; // add the number 16 at index 0, instead of 'apple'
+mixedArr.push(false); // adds false to the end of the array
+mixedArr.unshift('kiwi'); // adds 'kiwi' to the beginning of the array
+console.log(mixedArr);
