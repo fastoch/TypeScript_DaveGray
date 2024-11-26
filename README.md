@@ -168,4 +168,6 @@ Or it can be done explicitly, by expressly specifying the type.
 
 It's completeley okay to take advantage of TS's type inference, but as we learn it's recommended to be explicit.
 
+# Chapter 3 - Arrays & Objects
+
 
