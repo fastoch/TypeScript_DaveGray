@@ -167,7 +167,3 @@ Or it can be done explicitly, by expressly specifying the type.
 `let myName: string = 'Dave'`  
 
 
-
-
----
-@31:00
