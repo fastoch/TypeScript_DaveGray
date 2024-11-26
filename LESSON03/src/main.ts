@@ -58,3 +58,8 @@ mixedArr.push(false) // adds false to the end of the array
 mixedArr.unshift('kiwi') // adds 'kiwi' to the beginning of the array
 console.log(mixedArr)
 
+let test = [] // empty array than can contain any type of data
+let bands: string[] = [] // empty array than can only contain strings
+
+// Tuples are 
+
