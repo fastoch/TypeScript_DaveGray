@@ -61,5 +61,6 @@ console.log(mixedArr)
 let test = [] // empty array than can contain any type of data
 let bands: string[] = [] // empty array than can only contain strings
 
-// Tuples are 
 
+// TUPLES are ordered collections of elements with a fixed length and a predefined type for each index
+let myTuple: [string, number, boolean] = ['Dave', 82, true]

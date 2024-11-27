@@ -40,4 +40,5 @@ mixedArr.unshift('kiwi'); // adds 'kiwi' to the beginning of the array
 console.log(mixedArr);
 let test = []; // empty array than can contain any type of data
 let bands = []; // empty array than can only contain strings
-// Tuples are 
+// TUPLES are ordered collections of elements with a fixed length and a predefined type for each index
+let myTuple = ['Dave', 82, true];
