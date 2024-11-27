@@ -64,3 +64,7 @@ let bands: string[] = [] // empty array than can only contain strings
 
 // TUPLES are ordered collections of elements with a fixed length and a predefined type for each index
 let myTuple: [string, number, boolean] = ['Dave', 82, true]
+
+
+// OBJECTS
+let myObj: Object
