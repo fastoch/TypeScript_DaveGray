@@ -67,4 +67,31 @@ let myTuple: [string, number, boolean] = ['Dave', 82, true]
 
 
 // OBJECTS
-let myObj: Object
+let myObj: object
+myObj = [] // we can assign an empty array to an object, because an array is an object in JavaScript
+console.log(typeof myObj)
+myObj = bands // an array of strings is also an object
+myObj = {} // an empty object
+
+const exampleObj = {
+  prop1: 'Dave',
+  prop2: true
+}
+
+exampleObj.prop2 = false // cannot set the value to 42 or 'Alice' because the type is locked to boolean
+exampleObj.prop1 = 'fastoch'
+
+
+// Custom Types - declaring our own data types
+type Guitarist = {
+  name: string,
+  active: boolean,
+  albums: (string | number)[]
+}
+
+// then we can use our custom type, but we cannot omit any property
+let evh: Guitarist = {
+  name: 'Eddie Van Halen',
+  active: false, 
+  albums: ['The Evil That Men Do', 1985, 'IV', 'A Night at the Opera']
+}

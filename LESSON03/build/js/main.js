@@ -44,3 +44,19 @@ let bands = []; // empty array than can only contain strings
 let myTuple = ['Dave', 82, true];
 // OBJECTS
 let myObj;
+myObj = []; // we can assign an empty array to an object, because an array is an object in JavaScript
+console.log(typeof myObj);
+myObj = bands; // an array of strings is also an object
+myObj = {}; // an empty object
+const exampleObj = {
+    prop1: 'Dave',
+    prop2: true
+};
+exampleObj.prop2 = false; // cannot set the value to 42 or 'Alice' because the type is locked to boolean
+exampleObj.prop1 = 'fastoch';
+// then we can use our custom type, but we cannot omit any property
+let evh = {
+    name: 'Eddie Van Halen',
+    active: false,
+    albums: ['The Evil That Men Do', 1985, 'IV', 'A Night at the Opera']
+};
