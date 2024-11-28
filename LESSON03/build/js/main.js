@@ -38,3 +38,9 @@ mixedArr[0] = 16; // add the number 16 at index 0, instead of 'apple'
 mixedArr.push(false); // adds false to the end of the array
 mixedArr.unshift('kiwi'); // adds 'kiwi' to the beginning of the array
 console.log(mixedArr);
+let test = []; // empty array than can contain any type of data
+let bands = []; // empty array than can only contain strings
+// TUPLES are ordered collections of elements with a fixed length and a predefined type for each index
+let myTuple = ['Dave', 82, true];
+// OBJECTS
+let myObj;
