@@ -89,7 +89,7 @@ type Guitarist = {
   albums: (string | number)[]
 }
 
-// then we can use our custom type, but we cannot omit any property
+// then we can use our custom type, but all properties are required and must match the type
 let evh: Guitarist = {
   name: 'Eddie Van Halen',
   active: false, 

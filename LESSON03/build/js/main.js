@@ -54,7 +54,7 @@ const exampleObj = {
 };
 exampleObj.prop2 = false; // cannot set the value to 42 or 'Alice' because the type is locked to boolean
 exampleObj.prop1 = 'fastoch';
-// then we can use our custom type, but we cannot omit any property
+// then we can use our custom type, but all properties are required and must match the type
 let evh = {
     name: 'Eddie Van Halen',
     active: false,
