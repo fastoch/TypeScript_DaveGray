@@ -65,7 +65,7 @@ let Schumacher = {
     name: 'Michael Schumacher',
     wins: 300
 };
-// What about functions?
+// Using custom type in a function
 const greetGuitarist = (guitarist) => {
     return `Hello, ${guitarist.name}! You released ${guitarist.albums.length} albums in total.`;
 };

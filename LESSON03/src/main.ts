@@ -111,7 +111,7 @@ let Schumacher: Racer = {
 }
 
 
-// What about functions?
+// Using custom type in a function
 const greetGuitarist = (guitarist: Guitarist) => {
   return `Hello, ${guitarist.name}! You released ${guitarist.albums.length} albums in total.`
 }
