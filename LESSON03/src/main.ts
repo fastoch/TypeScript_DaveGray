@@ -109,3 +109,11 @@ let Schumacher: Racer = {
   name: 'Michael Schumacher',
   wins: 300
 }
+
+
+// What about functions?
+const greetGuitarist = (guitarist: Guitarist) => {
+  return `Hello, ${guitarist.name}! You released ${guitarist.albums.length} albums in total.`
+}
+
+console.log(greetGuitarist(evh))
