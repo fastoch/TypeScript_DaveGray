@@ -100,7 +100,7 @@ let evh: Guitarist = {
 type Racer = {
   name: string,
   wins: number,
-  active?: boolean,
+  active?: boolean,   // type is boolean | undefined
   injuries?: number
 }
 
@@ -118,6 +118,8 @@ const greetGuitarist = (guitarist: Guitarist) => {
 
 console.log(greetGuitarist(evh))
 
+// But notice we cannot pass an optional property to a function, cause it could be undefined
+
 
 // INTERFACES 
 // In TypeScript, both interfaces and type aliases are used to define the shape of objects and data types
@@ -125,5 +127,6 @@ console.log(greetGuitarist(evh))
 interface Vehicle {
   manufacturer: string,
   model: string,
-  year: number
+  year: number, 
+  category?: string
 }
