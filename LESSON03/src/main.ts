@@ -82,7 +82,7 @@ exampleObj.prop2 = false // cannot set the value to 42 or 'Alice' because the ty
 exampleObj.prop1 = 'fastoch'
 
 
-// Custom Types - declaring our own data types
+// Custom Types - declaring our own data types (also called "type aliases")
 type Guitarist = {
   name: string,
   active: boolean,
@@ -117,3 +117,13 @@ const greetGuitarist = (guitarist: Guitarist) => {
 }
 
 console.log(greetGuitarist(evh))
+
+
+// INTERFACES 
+// In TypeScript, both interfaces and type aliases are used to define the shape of objects and data types
+// For now, let's say that Interfaces are preferred in object-oriented programming due to their ability to extend classes
+interface Vehicle {
+  manufacturer: string,
+  model: string,
+  year: number
+}
