@@ -89,9 +89,23 @@ type Guitarist = {
   albums: (string | number)[]
 }
 
-// then we can use our custom type, but all properties are required and must match the type
+// then we can use our custom type, but all properties are required and must match the predefined types
 let evh: Guitarist = {
   name: 'Eddie Van Halen',
   active: false, 
   albums: ['The Evil That Men Do', 1985, 'IV', 'A Night at the Opera']
+}
+
+// We can make some properties optional by using the '?' operator
+type Racer = {
+  name: string,
+  wins: number,
+  active?: boolean,
+  injuries?: number
+}
+
+// then we can use this custom type without having to use the optional properties
+let Schumacher: Racer = {
+  name: 'Michael Schumacher',
+  wins: 300
 }

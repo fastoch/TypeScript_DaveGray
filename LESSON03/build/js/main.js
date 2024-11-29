@@ -54,9 +54,14 @@ const exampleObj = {
 };
 exampleObj.prop2 = false; // cannot set the value to 42 or 'Alice' because the type is locked to boolean
 exampleObj.prop1 = 'fastoch';
-// then we can use our custom type, but all properties are required and must match the type
+// then we can use our custom type, but all properties are required and must match the predefined types
 let evh = {
     name: 'Eddie Van Halen',
     active: false,
     albums: ['The Evil That Men Do', 1985, 'IV', 'A Night at the Opera']
+};
+// then we can use this custom type without having to use the optional properties
+let Schumacher = {
+    name: 'Michael Schumacher',
+    wins: 300
 };
