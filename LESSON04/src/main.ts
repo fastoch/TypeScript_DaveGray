@@ -111,14 +111,18 @@ let Schumacher: Racer = {
 }
 
 
-// Using custom type in a function
+// Let's use our custom type in a function
+// Let's assume the 'name' property is optional
+// We cannot use an optional property in a function, cause it could be undefined
+// We need to check if the property exists before using it
 const greetGuitarist = (guitarist: Guitarist) => {
-  return `Hello, ${guitarist.name}! You released ${guitarist.albums.length} albums in total.`
+  if (guitarist.name) {
+    return `Hello, ${guitarist.name}! You released ${guitarist.albums.length} albums in total.`
+  }
+  return "Hello!";
 }
 
 console.log(greetGuitarist(evh))
-
-// But notice we cannot pass an optional property to a function, cause it could be undefined
 
 
 // INTERFACES 
@@ -130,3 +134,19 @@ interface Vehicle {
   year: number, 
   category?: string
 }
+
+
+// ENUMS
+// Unlike most TS features, Enums are not a type-level addition to JS but something added to the language and runtime.
+
+enum Grade {
+  U,
+  D,
+  C,
+  B,
+  A
+}
+
+
+// -------------LESSON 04 Functions--------------------------
+

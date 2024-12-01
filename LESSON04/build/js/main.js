@@ -65,8 +65,25 @@ let Schumacher = {
     name: 'Michael Schumacher',
     wins: 300
 };
-// Using custom type in a function
+// Let's use our custom type in a function
+// Let's assume the 'name' property is optional
+// We cannot use an optional property in a function, cause it could be undefined
+// We need to check if the property exists before using it
 const greetGuitarist = (guitarist) => {
-    return `Hello, ${guitarist.name}! You released ${guitarist.albums.length} albums in total.`;
+    if (guitarist.name) {
+        return `Hello, ${guitarist.name}! You released ${guitarist.albums.length} albums in total.`;
+    }
+    return "Hello!";
 };
 console.log(greetGuitarist(evh));
+// ENUMS
+// Unlike most TS features, Enums are not a type-level addition to JS but something added to the language and runtime.
+var Grade;
+(function (Grade) {
+    Grade[Grade["U"] = 0] = "U";
+    Grade[Grade["D"] = 1] = "D";
+    Grade[Grade["C"] = 2] = "C";
+    Grade[Grade["B"] = 3] = "B";
+    Grade[Grade["A"] = 4] = "A";
+})(Grade || (Grade = {}));
+// -------------LESSON 04 Functions--------------------------
