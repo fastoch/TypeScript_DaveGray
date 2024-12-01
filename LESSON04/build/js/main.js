@@ -97,4 +97,12 @@ let userName;
 userName = 'Dave';
 userName = 'John';
 userName = 'Fastoch';
-// Literal types can also be used with numbers 
+// FUNCTIONS
+// explicit parameter types and return type
+const add = (a, b) => {
+    return a + b;
+};
+// explicit parameter types but returns nothing
+const logMsg = (message) => {
+    console.log(message);
+};
