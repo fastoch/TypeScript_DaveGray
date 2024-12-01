@@ -98,11 +98,13 @@ userName = 'Dave';
 userName = 'John';
 userName = 'Fastoch';
 // FUNCTIONS
-// explicit parameter types and return type
+// function with explicit parameter types and an explicit return type
 const add = (a, b) => {
     return a + b;
 };
-// explicit parameter types but returns nothing
+// function which can take any type of parameter and returns nothing
 const logMsg = (message) => {
     console.log(message);
 };
+logMsg('Hello!');
+logMsg(add(1, 2));
