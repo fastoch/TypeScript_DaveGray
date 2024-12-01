@@ -82,7 +82,7 @@ exampleObj.prop2 = false // cannot set the value to 42 or 'Alice' because the ty
 exampleObj.prop1 = 'fastoch'
 
 
-// Custom Types - declaring our own data types (also called "type aliases")
+// Custom Types - declaring our own data types (also called "Type Aliases")
 type Guitarist = {
   name: string,
   active: boolean,
@@ -150,3 +150,25 @@ enum Grade {
 
 // -------------LESSON 04 Functions--------------------------
 
+// In the previous chapter, we introduced Type Aliases 
+type strOrNum = string | number 
+type strOrNumArr = (string | number)[]
+
+// You can assign a type alias to another type alias
+type UserId = strOrNum  
+
+// But you cannot assign a type alias to an interface
+// interface PostId = strOrNum
+
+// Literal Types
+let instructorName: 'Dave' // 'Dave' is both a type and a value here
+// instructorName = 'Fastoch' // we cannot assign another value to instructorName
+instructorName = 'Dave' // the only accepted value is 'Dave'
+
+let userName: 'Dave' | 'Fastoch' | 'John'
+// The 3 above values will be accepted
+userName = 'Dave'
+userName = 'John'
+userName = 'Fastoch'
+
+// Literal types can also be used with numbers 

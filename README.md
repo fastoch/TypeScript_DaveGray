@@ -170,4 +170,14 @@ It's completeley okay to take advantage of TS's type inference, but as we learn 
 
 # Chapter 3 - Arrays & Objects
 
+- Arrays
+- Tuples (ordered array with a fixed length and predefined types)
+- Objects
+- Type aliases (custom types)
+  - Optional properties
+- Interfaces
+- Enums
+
+# Chapter 4 - Functions
+
 

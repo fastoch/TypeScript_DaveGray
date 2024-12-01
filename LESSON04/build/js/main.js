@@ -86,4 +86,15 @@ var Grade;
     Grade[Grade["B"] = 3] = "B";
     Grade[Grade["A"] = 4] = "A";
 })(Grade || (Grade = {}));
-// -------------LESSON 04 Functions--------------------------
+// But you cannot assign a type alias to an interface
+// interface PostId = strOrNum
+// Literal Types
+let instructorName; // 'Dave' is both a type and a value here
+// instructorName = 'Fastoch' // we cannot assign another value to instructorName
+instructorName = 'Dave'; // the only accepted value is 'Dave'
+let userName;
+// The 3 above values will be accepted
+userName = 'Dave';
+userName = 'John';
+userName = 'Fastoch';
+// Literal types can also be used with numbers 
