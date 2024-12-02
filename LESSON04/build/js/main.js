@@ -108,3 +108,14 @@ const logMsg = (message) => {
 };
 logMsg('Hello!');
 logMsg(add(1, 2));
+// we don't have to always use arrow functions, we can use regular functions as well
+let subtract = function (a, b) {
+    return a - b;
+};
+// then use these signatures in a function 
+let multiply = (a, b) => {
+    return a * b;
+};
+// This way we don't need to specify the types every time we declare functions that have the same signature
+// we can reuse this signature each time it matches the required types
+logMsg(multiply(4, 4));

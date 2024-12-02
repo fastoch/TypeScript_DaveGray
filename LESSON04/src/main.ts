@@ -185,3 +185,24 @@ const logMsg = (message: any): void => {
 
 logMsg('Hello!')
 logMsg(add(1, 2))
+
+// we don't have to always use arrow functions, we can use regular functions as well
+let subtract = function (a: number, b: number): number {
+  return a - b
+}
+
+// We can also define types for functions (we call them "signatures")
+type MathFunction = (a: number, b: number) => number
+
+// then use these signatures in a function 
+let multiply: MathFunction = (a, b) => {
+  return a * b
+}
+
+// This way we don't need to specify the types every time we declare functions that have the same signature
+// we can reuse this signature each time it matches the required types
+
+logMsg(multiply(4, 4))
+
+// we could also use interfaces for function signatures
+interface MathOperations { (a: number, b: number): number }
