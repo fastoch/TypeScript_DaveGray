@@ -206,3 +206,12 @@ logMsg(multiply(4, 4))
 
 // we could also use interfaces for function signatures
 interface MathOperations { (a: number, b: number): number }
+
+
+// FUNCTIONS - Optional parameters & default values
+const addAll = (a: number, b: number, c?: number): number => {
+  if (typeof c !== "undefined") {
+    return a + b + c
+  }
+  return a + b
+}

@@ -119,3 +119,10 @@ let multiply = (a, b) => {
 // This way we don't need to specify the types every time we declare functions that have the same signature
 // we can reuse this signature each time it matches the required types
 logMsg(multiply(4, 4));
+// FUNCTIONS - Optional parameters & default values
+const addAll = (a, b, c) => {
+    if (typeof c !== "undefined") {
+        return a + b + c;
+    }
+    return a + b;
+};
