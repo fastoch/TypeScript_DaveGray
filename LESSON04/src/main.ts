@@ -208,10 +208,20 @@ logMsg(multiply(4, 4))
 interface MathOperations { (a: number, b: number): number }
 
 
-// FUNCTIONS - Optional parameters & default values
+// FUNCTIONS - Optional parameters 
 const addAll = (a: number, b: number, c?: number): number => {
   if (typeof c !== "undefined") {
     return a + b + c
   }
   return a + b
 }
+
+// FUNCTIONS - default values
+const sumAll = (a: number, b: number, c: number = 2): number => {
+  return a + b + c
+}
+
+logMsg(addAll(1, 2, 3)) // 6
+logMsg(addAll(1, 2)) // // 3
+logMsg(sumAll(1, 2, 3)) // 6
+logMsg(sumAll(1, 2)) // 5 (c defaults to 2)
