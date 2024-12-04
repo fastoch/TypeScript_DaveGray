@@ -134,3 +134,9 @@ logMsg(addAll(1, 2, 3)); // 6
 logMsg(addAll(1, 2)); // // 3
 logMsg(sumAll(1, 2, 3)); // 6
 logMsg(sumAll(1, 2)); // 5 (c defaults to 2)
+// FUNCTIONS - Rest parameters
+const total = (...nums) => {
+    return nums.reduce((prev, curr) => prev + curr);
+};
+// The rest operator (...) allows functions to accept an indefinite number of arguments
+logMsg(total(1, 2, 3, 4)); // 10 (sum of all arguments)
