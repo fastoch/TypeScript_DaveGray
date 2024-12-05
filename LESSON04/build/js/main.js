@@ -146,3 +146,22 @@ const createError = (errMsg) => {
 };
 // The createError() function above has a return type of "never" when you mouse over it
 // The "never" type is essentially for functions that explicitly throw errors
+// You can also encounter the "never" type with functions that never return a value (infinite loops, etc.)
+const infinite = () => {
+    let i = 1;
+    while (true) {
+        i++;
+    }
+};
+// The infinite() function above has a return type of "never" when you mouse over it
+// in such cases, make sure you throw an error or return a value to exit this endless loop
+// For example:
+const endless = () => {
+    let i = 1;
+    while (true) {
+        i++;
+        if (i > 100)
+            break;
+    }
+};
+// now the return type is "void", which is much better than the "never" type
