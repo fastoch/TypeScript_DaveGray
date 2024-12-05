@@ -264,3 +264,4 @@ const endless = () => {
   }
 }
 // now the return type is "void", which is much better than the "never" type
+
