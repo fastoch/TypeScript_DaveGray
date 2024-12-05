@@ -180,4 +180,17 @@ It's completeley okay to take advantage of TS's type inference, but as we learn 
 
 # Chapter 4 - Functions
 
+- literal types
+- type aliases
+- function signatures
+- optional parameters
+- default values
+- rest parameters
+- the 'never' type
+- custom type guard
 
+# Chapter 5 - Assertions
+
+- 
+
+# Chapter 6 - 
