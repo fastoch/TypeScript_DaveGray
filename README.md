@@ -189,10 +189,14 @@ It's completeley okay to take advantage of TS's type inference, but as we learn 
 - the 'never' type
 - custom type guard
 
-# Chapter 5 - Assertions
+# Chapter 5 - Type Assertions
 
-TypeScript Assertion is also called 'Type Casting'.  
-Soemtimes, you will have...
+https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions  
 
+Type Assertion is a mechanism that **allows developers to tell the compiler about the type** of a variable.  
+It is used to **override TypeScript's inferred type** and treat a value as a specified type.  
+
+Type assertion is **similar to typecasting** in other languages, but it does not perform any special checks  
+and does not rebuild the code at runtime.
 
 # Chapter 6 - 
