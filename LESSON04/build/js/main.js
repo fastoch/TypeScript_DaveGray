@@ -140,3 +140,9 @@ const total = (...nums) => {
 };
 // The rest operator (...) allows functions to accept an indefinite number of arguments
 logMsg(total(1, 2, 3, 4)); // 10 (sum of all arguments)
+// The NEVER type
+const createError = (errMsg) => {
+    throw new Error(errMsg);
+};
+// The createError() function above has a return type of "never" when you mouse over it
+// The "never" type is essentially for functions that explicitly throw errors
