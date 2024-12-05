@@ -191,6 +191,8 @@ It's completeley okay to take advantage of TS's type inference, but as we learn 
 
 # Chapter 5 - Assertions
 
-- 
+TypeScript Assertion is also called 'Type Casting'.  
+Soemtimes, you will have...
+
 
 # Chapter 6 - 
