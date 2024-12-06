@@ -265,3 +265,30 @@ const endless = () => {
 }
 // now the return type is "void", which is much better than the "never" type
 
+
+//-------------------LESSON 05 Type Assertions------------------
+
+type One = string
+type Two = string | number
+type Three = 'hello'
+
+// With Type Assertion, we can convert to a more specific or less specific type
+let x: One = 'hello'
+let y = x as Two   // assigning a less specific type to y
+let z = x as Three   // assigning a more specific type to z
+
+// We can also use the angle brackets (<>) syntax to do the same thing
+let d = <One>'world' 
+let e = <string | number>'world'   // assigning a less specific type to e    
+
+// but this angle brackets notation cannot be used in .tsx files (TypeScript with JSX, like React for example)
+
+
+// Practical example of when to use type assertions
+const addOrConcat = (a: number, b: number, c: 'add' | 'concat'): number | string => {
+  if (c === 'add') return a + b
+  return '' + a + b  // The empty string is used to convert the numbers to strings (data type coercion)
+}
+
+// when we go to use the above function, an assertion can come in handy
+let myVal: string = addOrConcat(2,2,'concat') as string
