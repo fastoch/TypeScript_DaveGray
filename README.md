@@ -199,6 +199,6 @@ It is used to **override TypeScript's inferred type** and treat a value as a spe
 Type assertion is **similar to typecasting** in other languages, but it does not perform any special checks,  
 and does not rebuild the code at runtime.  
 
-
+Basically, we're telling the TS compiler that we know better, that it needs to listen to us regarding the type of a given variable.
 
 # Chapter 6 - 

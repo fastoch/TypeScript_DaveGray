@@ -180,3 +180,7 @@ const addOrConcat = (a, b, c) => {
 };
 // when we go to use the above function, an assertion can come in handy
 let myVal = addOrConcat(2, 2, 'concat');
+// Be careful! TS sees no problem here but a string is returned, not a number
+let nextVal = addOrConcat(2, 2, 'concat');
+// Using Assertions when working with the DOM (Document Object Model) = Web pages
+const img = document.getElementById("img");
