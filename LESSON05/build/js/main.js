@@ -184,3 +184,6 @@ let myVal = addOrConcat(2, 2, 'concat');
 let nextVal = addOrConcat(2, 2, 'concat');
 // Using Assertions when working with the DOM (Document Object Model) = Web pages
 const img = document.getElementById("img");
+img.src;
+// The non-null assertion operator in TS is represented by an exclamation mark (!) placed after a variable or expression.
+// It tells the TS compiler that a value is guaranteed to be non-null and non-undefined.
