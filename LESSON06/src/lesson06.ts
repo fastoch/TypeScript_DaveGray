@@ -10,13 +10,17 @@ class Coder {
     public readonly name: string, 
     public music: string, 
     private age: number, 
-    protected lang: string
+    protected lang: string = "TypeScript" // default value
   ) {
     this.name = name
     this.music = music
     this.age = age
     this.lang = lang
   }
+
+  // to access private members, we use getters and setters
+  public getAge() { return `Hello, I'm ${this.age}.` }
+  public setAge(newAge: number): void { this.age = newAge }
 }
 
 // Visibility modifiers:
@@ -28,4 +32,19 @@ class Coder {
 
 
 // Now let's instantiate our class
-const Dave = new Coder('Dave', 'Doom OST', 42, 'english')
+const Dave = new Coder('Dave', 'Doom OST', 42) // lang will default to "TypeScript"
+console.log(Dave.getAge())
+
+// now let's create a subclass of Coder
+class WebDev extends Coder {
+
+  constructor(
+    public computer: string,  
+    name: string, 
+    music: string, 
+    age: number
+  ) {
+    super(name, music, age)  // calls the constructor of Coder 
+    this.computer = computer
+  }
+}
