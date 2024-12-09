@@ -44,7 +44,39 @@ class WebDev extends Coder {
     music: string, 
     age: number
   ) {
-    super(name, music, age)  // first, we need to call the constructor of Coder + all wanted members
+    super(name, music, age)  // first, we need to call the constructor of Coder 
     this.computer = computer
+  }
+
+  public getLang() { 
+    return `I write ${this.lang}`  // returns the default value of lang as set in the superclass constructor
+  }
+}
+
+const Sara = new WebDev("Arch Linux", "Sara", "Eminem", 43)
+console.log(Sara.getLang()) // I write TypeScript
+console.log(Sara.getAge()) // Hello, I'm 43.
+
+
+// Applying (implementing) an interface to a class
+
+// simple interface with 2 properties and one method
+interface Musician {
+  name: string,
+  instrument: string,
+  play(action: string): string
+}
+
+class Artist implements Musician {
+  name: string
+  instrument: string
+  
+  constructor(name: string, instrument: string) {
+    this.name = name
+    this.instrument = instrument
+  }
+
+  play(action: string) {
+    return `I ${action} ${this.instrument}`
   }
 }
