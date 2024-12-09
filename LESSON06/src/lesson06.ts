@@ -10,7 +10,7 @@ class Coder {
     public readonly name: string, 
     public music: string, 
     private age: number, 
-    protected lang: string = "TypeScript" // default value
+    protected lang: string = "TypeScript" // default value for lang
   ) {
     this.name = name
     this.music = music
@@ -44,7 +44,7 @@ class WebDev extends Coder {
     music: string, 
     age: number
   ) {
-    super(name, music, age)  // calls the constructor of Coder 
+    super(name, music, age)  // first, we need to call the constructor of Coder + all wanted members
     this.computer = computer
   }
 }
