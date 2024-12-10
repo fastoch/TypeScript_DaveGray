@@ -12,7 +12,7 @@ class Coder {
     private age: number, 
     protected lang: string = "TypeScript" // default value for lang
   ) {
-    this.name = name
+    this.name = name      // 'this' refers to the current instance of a class (this object)
     this.music = music
     this.age = age
     this.lang = lang
@@ -58,7 +58,7 @@ console.log(Sara.getLang()) // I write TypeScript
 console.log(Sara.getAge()) // Hello, I'm 43.
 
 
-// Applying (implementing) an interface to a class
+// -----------------Applying (implementing) an interface to a class--------------------------
 
 // simple interface with 2 properties and one method
 interface Musician {
@@ -67,7 +67,9 @@ interface Musician {
   play(action: string): string
 }
 
+// now we can use this interface in a class
 class Artist implements Musician {
+  // with the same properties as the interface (including their type)
   name: string
   instrument: string
   
@@ -76,7 +78,26 @@ class Artist implements Musician {
     this.instrument = instrument
   }
 
+  // and with the same method
   play(action: string) {
-    return `I ${action} ${this.instrument}`
+    return `${this.name} ${action} ${this.instrument}`
   }
 }
+
+const Mike = new Artist("Mike Tyson", "cocky fighters")
+console.log(Mike.play("knocks out"))
+
+
+// ----------------- Static members --------------------------
+
+// a 'static' member is not tied to any instance of the class, but rather to the class itself
+
+class Peeps {
+  // static property
+  static count: number = 0   
+
+  // static method
+  static getCount(): number {
+    return Peeps.count   // I refer to the class itself, not using 'this'
+  }
+} 

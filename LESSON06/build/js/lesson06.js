@@ -9,7 +9,7 @@ class Coder {
         this.music = music;
         this.age = age;
         this.lang = lang;
-        this.name = name;
+        this.name = name; // 'this' refers to the current instance of a class (this object)
         this.music = music;
         this.age = age;
         this.lang = lang;
@@ -41,12 +41,26 @@ class WebDev extends Coder {
 const Sara = new WebDev("Arch Linux", "Sara", "Eminem", 43);
 console.log(Sara.getLang()); // I write TypeScript
 console.log(Sara.getAge()); // Hello, I'm 43.
+// now we can use this interface in a class
 class Artist {
     constructor(name, instrument) {
         this.name = name;
         this.instrument = instrument;
     }
+    // and with the same method
     play(action) {
-        return `I ${action} ${this.instrument}`;
+        return `${this.name} ${action} ${this.instrument}`;
     }
 }
+const Mike = new Artist("Mike Tyson", "cocky fighters");
+console.log(Mike.play("knocks out"));
+// ----------------- Static members --------------------------
+// a 'static' member is not tied to any instance of the class, but rather to the class itself
+class Peeps {
+    // static method
+    static getCount() {
+        return Peeps.count; // I refer to the class itself, not using 'this'
+    }
+}
+// static property
+Peeps.count = 0;
