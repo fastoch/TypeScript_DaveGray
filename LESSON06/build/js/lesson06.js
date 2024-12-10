@@ -61,6 +61,16 @@ class Peeps {
     static getCount() {
         return Peeps.count; // I refer to the class itself, not using 'this'
     }
+    constructor(name) {
+        this.name = name;
+        this.name = name;
+        this.id = ++Peeps.count; // pre-incrementing sets our first id to 1 instead of 0
+    }
 }
 // static property
 Peeps.count = 0;
+// Let's instantiate Peeps for a few people
+const John = new Peeps("John");
+const Wayne = new Peeps("Wayne");
+const Personne = new Peeps("Personne");
+console.log(Peeps.getCount()); // 3, we have three Peeps instantiated
