@@ -85,4 +85,12 @@ class Band {
     get data() {
         return this.dataState;
     }
+    // get is a special keyword we can use to retrieve private data
+    set data(value) {
+        if (Array.isArray(value) && value.every(elt => typeof elt === 'string')) {
+            this.dataState = value;
+        }
+        else
+            throw new Error('param is not an array of strings');
+    }
 }

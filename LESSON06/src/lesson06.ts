@@ -132,4 +132,15 @@ class Band {
   public get data(): string[] {
     return this.dataState
   }
+
+  // get is a special keyword we can use to retrieve private data
+
+  public set data(value: string[]) {
+    if (Array.isArray(value) && value.every(elt => typeof elt === 'string')) { 
+      this.dataState = value
+    } else throw new Error('param is not an array of strings')
+  }
+
+  // set is a special keyword we can use to modify private data
+  // we use an if() statement to make sure we only accept the expected data type
 }
