@@ -59,7 +59,7 @@ console.log(Mike.play("knocks out"));
 class Peeps {
     // static method
     static getCount() {
-        return Peeps.count; // I refer to the class itself, not using 'this'
+        return `We instantiated the Peeps class ${Peeps.count} times.`; // I refer to the class itself, not using 'this'
     }
     constructor(name) {
         this.name = name;
@@ -73,4 +73,16 @@ Peeps.count = 0;
 const John = new Peeps("John");
 const Wayne = new Peeps("Wayne");
 const Personne = new Peeps("Personne");
-console.log(Peeps.getCount()); // 3, we have three Peeps instantiated
+console.log(Peeps.getCount()); // We instantiated the Peeps class 3 times.
+console.log(John.id); // 1
+console.log(Wayne.id); // 2
+console.log(Personne.id); // 3
+// ------------------getters & setters----------------------
+class Band {
+    constructor() {
+        this.dataState = [];
+    }
+    get data() {
+        return this.dataState;
+    }
+}
