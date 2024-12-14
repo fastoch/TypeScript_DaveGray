@@ -202,3 +202,7 @@ and does not rebuild the code at runtime.
 Basically, we're telling the TS compiler that we know better, that it needs to listen to us regarding the type of a given variable.
 
 # Chapter 6 - Classes
+
+# Chapter 7 - Index Signatures & keyof Assertions
+
+# Chapter 8 - 

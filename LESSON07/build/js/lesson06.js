@@ -87,10 +87,17 @@ class Band {
     }
     // get is a special keyword we can use to retrieve private data
     set data(value) {
+        // if value is an array and contains only strings
         if (Array.isArray(value) && value.every(elt => typeof elt === 'string')) {
             this.dataState = value;
         }
         else
-            throw new Error('param is not an array of strings');
+            throw new Error('passed argument is not an array of strings');
     }
 }
+// Let's instantiate our class
+const myBand = new Band();
+myBand.data = ['a', 'b', 'c', 'd', 'e', 'f']; // uses the setter function
+console.log(myBand.data);
+myBand.data = [...myBand.data, 'g', 'h', 'i']; // using the spread operator to append new elements
+console.log(myBand.data);
