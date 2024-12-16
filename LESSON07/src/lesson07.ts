@@ -51,4 +51,5 @@ const todaysNet = (transactions: TransactionIndexSignature): number => {
   return total
 }
 
+// display the sum of all transactions
 console.log(`Dynamically accessing all properties: ${todaysNet(todaysOperations)}`) // 35
