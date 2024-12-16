@@ -6,7 +6,7 @@
 // The other reason for using index signatures is because TS requires them if you attempt to access an object's property dynamically.
 // That second reason is how beginners usually discover the need for index signatures.
 
-// without index signature
+// interface without index signature
 interface TransactionObj {
   Pizza: number,
   Books: number,
@@ -20,6 +20,7 @@ const todaysTransactions: TransactionObj = {
   Job: 50
 }
 
+// 2 ways of accessing the same property
 console.log(`Pizza property without index signature: ${todaysTransactions.Pizza}`) // -10
 console.log(`Pizza property without index signature: ${todaysTransactions['Pizza']}`) // -10
 
@@ -30,7 +31,7 @@ interface TransactionIndexSignature {
 }
 // note that keys cannot be booleans
 
-// now let's define an object from this new interface
+// now let's define a similar object from this new interface
 const todaysOperations: TransactionIndexSignature = {
   Pizza: -10,
   Books: -5,
@@ -41,7 +42,7 @@ const todaysOperations: TransactionIndexSignature = {
 let prop: string = 'Pizza'
 console.log(`Pizza property dynamically accessed: ${todaysOperations[prop]}`) // -10
 
-// with our index signature, we can also loop through the properties
+// with our index signature, we can also loop through the properties (dynamic access)
 const todaysNet = (transactions: TransactionIndexSignature): number => {
   let total = 0
   for (const transaction in transactions) {
