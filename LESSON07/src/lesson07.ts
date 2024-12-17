@@ -29,7 +29,7 @@ console.log(`Pizza property without index signature: ${todaysTransactions['Pizza
 interface TransactionIndexSignature {
   [key: string]: number
 }
-// note that keys cannot be booleans
+// note that keys cannot be booleans, and the word 'key' can be replaced with 'index'
 
 // now let's define a similar object from this new interface
 const todaysOperations: TransactionIndexSignature = {
@@ -53,3 +53,21 @@ const todaysNet = (transactions: TransactionIndexSignature): number => {
 
 // display the sum of all transactions
 console.log(`Dynamically accessing all properties: ${todaysNet(todaysOperations)}`) // 35
+
+// to prevent assignment of a new value to any property of the objects we create, we can use 'readonly'
+interface myObject {
+  readonly [key: string]: number
+}
+
+// let's create an object with this read-only index signature
+const object1: myObject = {
+  Pizza: -10,
+  Books: -5,
+  Job: 50,
+}
+
+// object1.Pizza = 10  // error: Cannot assign a new value to 'Pizza' because it is a read-only property
+
+// BE AWARE that index signatures are not entirely safe
+// because TS cannot know the names of the properties in advance, it will let us try and access a property that does not exist:
+console.log(object1.Dave) // returns 'undefined' but doesn't give us an error
