@@ -6,7 +6,7 @@
 // The other reason for using index signatures is because TS requires them if you attempt to access an object's property dynamically.
 // That second reason is how beginners usually discover the need for index signatures.
 
-// interface without index signature
+// interface without an index signature
 interface TransactionObj {
   Pizza: number,
   Books: number,
@@ -24,8 +24,9 @@ const todaysTransactions: TransactionObj = {
 console.log(`Pizza property without index signature: ${todaysTransactions.Pizza}`) // -10
 console.log(`Pizza property without index signature: ${todaysTransactions['Pizza']}`) // -10
 
+// -----------------------------------------------------------------------------------------------------
 
-// declaring our index signature
+// declaring our first INDEX SIGNATURE
 interface TransactionIndexSignature {
   [key: string]: number
 }
@@ -53,6 +54,7 @@ const todaysNet = (transactions: TransactionIndexSignature): number => {
 
 // display the sum of all transactions
 console.log(`Dynamically accessing all properties: ${todaysNet(todaysOperations)}`) // 35
+
 
 // to prevent assignment of a new value to any property of the objects we create, we can use 'readonly'
 interface myObject {
@@ -99,14 +101,36 @@ interface Student {
   classes?: number[]  // optional property
 }
 
+// Let's create an object from this new interface
 const student: Student = {
   name: "Doug",
   GPA: 3.5,
   classes: [100, 200]
 }
 
-console.log(student.test) // returns 'undefined' because test doesn't exist
+console.log(student.test) // returns 'undefined' because test doesn't exist, but TS lets us try and access it
 
+// let's loop through the object's properties
 for (const key in student) {
-  
+  console.log(`${key}: ${student[key]}`)
+}
+
+// ------------------------------------------------------------------------------------------------
+
+// But how could we iterate through an object that does not have an index signature?
+// Thanks to KEYOF ASSERTIONS
+interface Sandwich {
+  bread: string,
+  meat: string,
+  cheese: string
+}
+
+const mySandwich: Sandwich = {
+  bread: "white",
+  meat: "chicken",
+  cheese: "mozzarella"
+}
+
+for (const key in mySandwich) {
+  console.log(`${key}: ${mySandwich[key as keyof Sandwich]}`)
 }

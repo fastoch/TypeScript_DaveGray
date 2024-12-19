@@ -45,11 +45,22 @@ const object2 = {
     Job: 25,
     Xmas: 100 // not required
 };
+// Let's create an object from this new interface
 const student = {
     name: "Doug",
     GPA: 3.5,
     classes: [100, 200]
 };
-console.log(student.test); // returns 'undefined' because test doesn't exist
+console.log(student.test); // returns 'undefined' because test doesn't exist, but TS lets us try and access it
+// let's loop through the object's properties
 for (const key in student) {
+    console.log(`${key}: ${student[key]}`);
+}
+const mySandwich = {
+    bread: "white",
+    meat: "chicken",
+    cheese: "mozzarella"
+};
+for (const key in mySandwich) {
+    console.log(`${key}: ${mySandwich[key]}`);
 }
