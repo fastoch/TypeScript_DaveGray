@@ -206,3 +206,7 @@ Basically, we're telling the TS compiler that we know better, that it needs to l
 # Chapter 7 - Index Signatures & keyof Assertions
 
 # Chapter 8 - 
+
+
+---
+EOF

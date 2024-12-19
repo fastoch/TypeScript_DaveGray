@@ -9,7 +9,7 @@ const todaysTransactions = {
 // 2 ways of accessing the same property
 console.log(`Pizza property without index signature: ${todaysTransactions.Pizza}`); // -10
 console.log(`Pizza property without index signature: ${todaysTransactions['Pizza']}`); // -10
-// note that keys cannot be booleans, and the word 'key' can be replaced with 'index'
+// note that keys cannot be booleans, and the word 'key' can be replaced with 'index' > index signature
 // now let's define a similar object from this new interface
 const todaysOperations = {
     Pizza: -10,
@@ -39,3 +39,17 @@ const object1 = {
 // BE AWARE that index signatures are not entirely safe
 // because TS cannot know the names of the properties in advance, it will let us try and access a property that does not exist:
 console.log(object1.Dave); // returns 'undefined' but doesn't give us an error
+const object2 = {
+    Pizza: 16,
+    Books: 8,
+    Job: 25,
+    Xmas: 100 // not required
+};
+const student = {
+    name: "Doug",
+    GPA: 3.5,
+    classes: [100, 200]
+};
+console.log(student.test); // returns 'undefined' because test doesn't exist
+for (const key in student) {
+}

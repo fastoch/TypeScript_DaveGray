@@ -29,7 +29,7 @@ console.log(`Pizza property without index signature: ${todaysTransactions['Pizza
 interface TransactionIndexSignature {
   [key: string]: number
 }
-// note that keys cannot be booleans, and the word 'key' can be replaced with 'index'
+// note that keys cannot be booleans, and the word 'key' can be replaced with 'index' > index signature
 
 // now let's define a similar object from this new interface
 const todaysOperations: TransactionIndexSignature = {
@@ -68,6 +68,45 @@ const object1: myObject = {
 
 // object1.Pizza = 10  // error: Cannot assign a new value to 'Pizza' because it is a read-only property
 
+
 // BE AWARE that index signatures are not entirely safe
 // because TS cannot know the names of the properties in advance, it will let us try and access a property that does not exist:
 console.log(object1.Dave) // returns 'undefined' but doesn't give us an error
+
+
+// Here's an index signature with a few required properties 
+// This signature will allow other properties to be added to an object created with this interface
+interface myIndexSignature {
+  readonly [key: string]: number  // this is the index signature
+  Pizza: number,   // required property
+  Books: number,   // required property
+  Job: number,     // required property
+}
+
+const object2: myIndexSignature = {
+  Pizza: 16,
+  Books: 8,
+  Job: 25,
+  Xmas: 100   // not required
+}
+
+
+// Let's see another example
+interface Student {
+  [key: string]: string | number | number[] | undefined   // we provide undefined because classes is optional 
+  name: string,
+  GPA: number,  // Grade Point Average
+  classes?: number[]  // optional property
+}
+
+const student: Student = {
+  name: "Doug",
+  GPA: 3.5,
+  classes: [100, 200]
+}
+
+console.log(student.test) // returns 'undefined' because test doesn't exist
+
+for (const key in student) {
+  
+}
