@@ -167,3 +167,8 @@ const monthlyIncomes: Incomes = {
   bonus: 2000,
   sidehustle: 1000
 }
+
+// To loop through these properties
+for (const revenue in monthlyIncomes) {
+  console.log(monthlyIncomes[revenue as keyof Incomes])
+}
