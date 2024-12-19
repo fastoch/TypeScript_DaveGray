@@ -134,3 +134,15 @@ const mySandwich: Sandwich = {
 for (const key in mySandwich) {
   console.log(`${key}: ${mySandwich[key as keyof Sandwich]}`)
 }
+
+// keyof creates a union-type of bread | meat | cheese
+
+
+// To display only the values (white, chicken, mozzarella), we can do this
+Object.keys(mySandwich).map(key => {
+  console.log(mySandwich[key as keyof typeof mySandwich])   
+})
+
+// Object.keys(mySandwich) returns an array of the keys (the properties) in the mySandwich object
+// The map() function allows us to log the corresponding values
+// we use typeof mySandwich because we pretend we don't know the type of the object (Sandwich)
