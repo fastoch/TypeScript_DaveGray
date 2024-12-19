@@ -134,15 +134,36 @@ const mySandwich: Sandwich = {
 for (const key in mySandwich) {
   console.log(`${key}: ${mySandwich[key as keyof Sandwich]}`)
 }
-
 // keyof creates a union-type of bread | meat | cheese
 
 
-// To display only the values (white, chicken, mozzarella), we can do this
+// Another way of doing this
 Object.keys(mySandwich).map(key => {
-  console.log(mySandwich[key as keyof typeof mySandwich])   
+  console.log(`${key}: ${mySandwich[key as keyof typeof mySandwich]}`)   
 })
 
 // Object.keys(mySandwich) returns an array of the keys (the properties) in the mySandwich object
 // The map() function allows us to log the corresponding values
 // we use typeof mySandwich because we pretend we don't know the type of the object (Sandwich)
+
+
+// Now let's use keyof in a function 
+const logStudentKey = (student: Student, key: keyof Student): void => {
+  console.log(`${student.name}'s ${key}: ${student[key]}`)
+}
+
+// calling (invoking) the function
+logStudentKey(student, 'GPA')   // Doug's GPA: 3.5
+
+
+// How to use types instead of an interface with an index signature?
+// Thanks to the utility type 'Record<K, T>'
+
+type Streams = 'salary' | 'bonus' | 'sidehustle'  // our properties (or keys)
+type Incomes = Record<Streams, number>            // replaces our index signature
+
+const monthlyIncomes: Incomes = {
+  salary: 5000,
+  bonus: 2000,
+  sidehustle: 1000
+}
