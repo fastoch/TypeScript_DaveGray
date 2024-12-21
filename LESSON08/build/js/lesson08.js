@@ -53,3 +53,25 @@ console.log(isTrue({ age: 16, sex: "female" })); // { arg: { age: 16, sex: "fema
 console.log(isTrue(undefined)); // { arg: undefined, is: false }
 console.log(isTrue(null)); // { arg: null, is: false }
 console.log(isTrue(NaN)); // { arg: NaN, is: false }
+// Now let's rewrite our previous function
+const checkBoolValue = (arg) => {
+    // if the argument is an empty array
+    if (Array.isArray(arg) && !arg.length) {
+        return { value: arg, is: false };
+    }
+    // if the argument is an empty object
+    if (isObject(arg) && !Object.keys(arg).length) {
+        return { value: arg, is: false };
+    }
+    return { value: arg, is: !!arg };
+};
+const processUser = (user) => {
+    // process the user with logic here
+    return user;
+};
+// this function will accept any object as long as it has an 'id' property
+console.log(processUser({ id: 1, name: 'fastoch' }));
+// console.log(processUser({ name: 'fastoch'}))
+// Example 5: building K as a key of the first type
+const getUsersproperty = () => {
+};
