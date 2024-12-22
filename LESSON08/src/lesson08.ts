@@ -96,7 +96,7 @@ console.log(processUser({ id: 1, name: 'fastoch'}))
 // console.log(processUser({ name: 'fastoch'}))
 
 
-// Example 5: building K as a key of the type T
+// Example 5: building K as a key of a type T object
 const getUsersProperty = <T extends HasID, K extends keyof T>(users: T[], key: K): T[K][] => {
   return users.map(user => user[key])
 }
@@ -338,3 +338,25 @@ const usersArray = [
 
 // And now we can test our function to retrieve the email address of every user
 console.log(getUsersProperty(usersArray, "email"))
+console.log(getUsersProperty(usersArray, "name"))
+
+
+// Example 6: Generics and Classes
+class StateObject<T> {
+  private data: T
+
+  constructor(value: T) {
+    this.data = value
+  }
+
+  get state(): T {
+    return this.data
+  }
+
+  set state(value: T) {
+    this.data = value
+  }
+}
+
+const store = new StateObject("Nike Air Vapor Max")
+console.log(store.state) // uses our getter
