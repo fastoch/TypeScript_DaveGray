@@ -201,11 +201,26 @@ and does not rebuild the code at runtime.
 
 Basically, we're telling the TS compiler that we know better, that it needs to listen to us regarding the type of a given variable.
 
+>[!important]
+>For the 5 first chapters (or lessons), we only used a `main.ts` file. 
+
 # Chapter 6 - Classes
+
+See `lesson06.ts`
 
 # Chapter 7 - Index Signatures & keyof Assertions
 
+See `lesson07.ts`
+
 # Chapter 8 - Generics
+
+See `lesson08.ts`
+
+# Chapter 9 - Utility Types
+
+See `lesson09.ts`
+
+# Chapter 10 - 
 
 
 ---
