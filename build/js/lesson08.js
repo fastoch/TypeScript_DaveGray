@@ -327,8 +327,9 @@ class StateObject {
 }
 const store = new StateObject("Air Vapor Max");
 console.log(store.state); // using our getter
-store.state = "Rebook Pump"; // we can assign another string value
+store.state = "Rebook Pump"; // using our setter to assign another string value
 // store.state = 42 // but TS won't accept a number now that it has inferred that T = string
-// But we can create another object with a different type
+// But we can create another object and specify the types we want
 const store2 = new StateObject([16, "John"]);
-// now TS will accept any array of values that match the above types
+// now TS will accept any array of values that match the above union-type
+console.log(store2.state);
