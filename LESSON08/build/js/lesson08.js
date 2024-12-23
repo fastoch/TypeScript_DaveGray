@@ -325,5 +325,10 @@ class StateObject {
         this.data = value;
     }
 }
-const store = new StateObject("Nike Air Vapor Max");
-console.log(store.state); // uses our getter
+const store = new StateObject("Air Vapor Max");
+console.log(store.state); // using our getter
+store.state = "Rebook Pump"; // we can assign another string value
+// store.state = 42 // but TS won't accept a number now that it has inferred that T = string
+// But we can create another object with a different type
+const store2 = new StateObject([16, "John"]);
+// now TS will accept any array of values that match the above types
