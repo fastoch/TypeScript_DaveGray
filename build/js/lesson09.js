@@ -50,3 +50,6 @@ const preview = {
     studentId: "p053",
     title: "mid-term exam"
 };
+const createNewAssign = (title, points) => {
+    return { title, points };
+};

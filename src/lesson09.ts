@@ -100,9 +100,24 @@ const preview: AssignPreview = {
 // 5. Exclude & Extract (not to be confused with Pick & Omit)
 
 /*
-Pick and Omit select or remove properties from object types (Interface or Type Alias).
+Pick and Omit select or remove properties from object types (Interfaces or Type Aliases).
 Whereas Extract and Exclude filter or remove types from union types.
 */
 
 type adjustedGrade = Exclude<LetterGrades, "U">
 type highGrades = Extract<LetterGrades, "A" | "B">
+
+
+// 6. NonNullable
+
+type allPossibleValues = 'Dave' | 'John' | null | undefined
+type namesOnly = NonNullable<allPossibleValues>
+
+
+// 7. ReturnType
+
+type newAssign = { title: string, points: number }
+
+const createNewAssign = (title: string, points: number): newAssign => {
+  return { title, points }
+}
