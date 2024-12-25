@@ -17,7 +17,7 @@ console.log(assignGraded);
 // 2. Required & Readonly
 // In this function, all properties are required, including the optional one (verified)
 const recordAssignment = (assign) => {
-    // some logi to send the assignment to a database 
+    // some logic to send the assignment to a database 
     return assign;
 };
 // now let's create a verified assignment that will be readonly 
@@ -46,4 +46,7 @@ const score = {
     studentId: "p002",
     grade: 82
 };
-// Omit will do the opposite
+const preview = {
+    studentId: "p053",
+    title: "mid-term exam"
+};

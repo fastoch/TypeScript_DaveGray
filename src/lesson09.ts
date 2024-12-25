@@ -33,7 +33,7 @@ console.log(assignGraded)
 
 // In this function, all properties are required, including the optional one (verified)
 const recordAssignment = (assign: Required<Assignment>): Assignment => {
-  // some logi to send the assignment to a database 
+  // some logic to send the assignment to a database 
   return assign
 }
 
@@ -42,6 +42,7 @@ const assignVerified: Readonly<Assignment> = { ...assignGraded, verified: true }
 // Readonly properties cannot be overwritten
 
 // We need to add a value to the 'verified' property, otherwise we couldn't record assignVerified.
+
 // Likewise, we couldn't record assignGraded. but we could do the following:
 recordAssignment({ ...assignGraded, verified: true })
 
@@ -86,4 +87,22 @@ const score: AssignResult = {
   grade: 82
 }
 
-// Omit will do the opposite
+// Omit will do the opposite of Pick
+
+type AssignPreview = Omit<Assignment, 'grade' | 'verified'>
+
+const preview: AssignPreview = {
+  studentId: "p053",
+  title: "mid-term exam"
+}
+
+
+// 5. Exclude & Extract (not to be confused with Pick & Omit)
+
+/*
+Pick and Omit select or remove properties from object types (Interface or Type Alias).
+Whereas Extract and Exclude filter or remove types from union types.
+*/
+
+type adjustedGrade = Exclude<LetterGrades, "U">
+type highGrades = Extract<LetterGrades, "A" | "B">
