@@ -222,9 +222,29 @@ See `lesson09.ts`
 
 # Chapter 10 - Vite.js + TypeScript
 
-See `lesson10.ts`
+See dedicated `Vite` folder
+
+To use Vite, you first need to install Node.js  
+Node.js is an open-source, cross-platform JavaScript runtime environment.  
+
+To check if Node is already installed and which version you have, open a terminal and run `node -v`.  
+
+Navigate to your project's parent folder via the `cd` command.  
+
+Then, run `npm create vite@latest` to start a new Vite project.
+- Give your project a name (ours will be `vite-ts`)
+- Select a framework (we'll go with *Vanilla* here)
+- Then you can choose between JS and TS, we'll pick TS
+- Once your Vite project folder gets created, run: 
+  - `cd vite-ts` to navigate to your project folder
+  - `npm install` to install all dependencies listed in the `package.json` file to the local
+  `node_modules` folder.
+  - if a `package-lock.json` file exists, it uses that to ensure consistent installations across
+  different environments.
+- `npm run dev` to start up our development server
 
 # Chapter 11 - 
+
 
 
 ---
