@@ -220,7 +220,11 @@ See `lesson08.ts`
 
 See `lesson09.ts`
 
-# Chapter 10 - 
+# Chapter 10 - Vite.js + TypeScript
+
+See `lesson10.ts`
+
+# Chapter 11 - 
 
 
 ---

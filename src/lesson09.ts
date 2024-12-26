@@ -152,10 +152,26 @@ interface User {
   email: string
 }
 
-// async function that takes no parameters and returns a Promise
+// async function that takes no parameters and returns a Promise 
 const fetchUsers = async(): Promise<User[]> => {
   const data = await fetch(
-
-  )
+    'https://jsonplaceholder.typicode.com/users'
+  ).then(res => {
+    return res.json()
+  }).catch(err => {
+    if (err instanceof Error) console.log(err.message)
+  })
   return data
 }
+
+/* 
+The above function fetches data from the jsonplaceholder website, 
+  using then() to return that data if the Promise gets resolved, 
+  or catching the error if the Promise gets rejected.
+*/
+
+type FetchUsersReturnType1 = ReturnType<typeof fetchUsers>  // Promise<User[]>
+type FetchUsersReturnType2 = Awaited<ReturnType<typeof fetchUsers>>  // User[]
+
+fetchUsers().then(users => console.log(users))  // User[]
+
