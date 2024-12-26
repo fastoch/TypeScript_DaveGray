@@ -245,9 +245,18 @@ Then, run `npm create vite@latest` to start a new Vite project.
 - `npm run dev` to start up our local development server
 - you can ctrl + click on the provided http://localhost:5173/ link to access your minimal Vite app
 
+More about Vite: https://vite.dev/guide/ 
 
-# Chapter 11 - 
+# Chapter 11 - TypeScript Project
 
+
+
+---
+
+# Chapter 12 - React + TypeScript
+
+Chapters 1-11 were for learning TypeScript fundamentals and chapters 12-17 cover TypeScript with React.  
+Save the React chapters until AFTER you have learned React.
 
 
 ---
