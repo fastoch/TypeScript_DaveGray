@@ -55,3 +55,12 @@ const preview = {
 const createNewAssign = (title, points) => {
     return { title, points };
 };
+// This way, if we change the function, it will automatically update the return type
+// The next utility type follows the same theme (derives the type from a function)
+const tsAssign = createNewAssign("Utility Types", 100);
+console.log(tsAssign);
+// Note that this type is a tuple
+const assignArgs = ["Generics", 100];
+const tsAssign2 = createNewAssign(...assignArgs);
+console.log(tsAssign2);
+// 9. Awaited

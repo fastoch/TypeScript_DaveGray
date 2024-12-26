@@ -127,8 +127,35 @@ type newAssign = ReturnType<typeof createNewAssign>
 // This way, if we change the function, it will automatically update the return type
 // The next utility type follows the same theme (derives the type from a function)
 
+const tsAssign: newAssign = createNewAssign("Utility Types", 100)
+console.log(tsAssign)
+
 
 // 8. Parameters
 
 // This time, we'll derive a type from the parameters of a function
 type assignParams = Parameters<typeof createNewAssign>
+// Note that this type is a tuple
+
+const assignArgs: assignParams = ["Generics", 100]
+
+const tsAssign2: newAssign = createNewAssign(...assignArgs)
+console.log(tsAssign2)
+
+
+// 9. Awaited - helps us with the return type of a promise
+
+interface User {
+  id: number, 
+  name: string,
+  username: string,
+  email: string
+}
+
+// async function that takes no parameters and returns a Promise
+const fetchUsers = async(): Promise<User[]> => {
+  const data = await fetch(
+
+  )
+  return data
+}
