@@ -222,7 +222,8 @@ See `lesson09.ts`
 
 # Chapter 10 - Vite.js + TypeScript
 
-See dedicated `Vite` folder
+See dedicated `Vite` folder.  
+Vite.js was first released on April 20, 2020.  
 
 To use Vite, you first need to install Node.js  
 Node.js is an open-source, cross-platform JavaScript runtime environment.  
@@ -241,7 +242,7 @@ Then, run `npm create vite@latest` to start a new Vite project.
   `node_modules` folder.
   - if a `package-lock.json` file exists, it uses that to ensure consistent installations across
   different environments.
-- `npm run dev` to start up our development server
+- `npm run dev` to start up our local development server
 
 # Chapter 11 - 
 
