@@ -50,6 +50,8 @@ const preview = {
     studentId: "p053",
     title: "mid-term exam"
 };
+// 7. ReturnType
+// Here's a function where we don't provide the return type
 const createNewAssign = (title, points) => {
     return { title, points };
 };

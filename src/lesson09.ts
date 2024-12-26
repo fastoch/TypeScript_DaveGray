@@ -116,8 +116,19 @@ type namesOnly = NonNullable<allPossibleValues>
 
 // 7. ReturnType
 
-type newAssign = { title: string, points: number }
-
-const createNewAssign = (title: string, points: number): newAssign => {
+// Here's a function where we don't provide the return type
+const createNewAssign = (title: string, points: number) => {
   return { title, points }
 }
+
+// We can create the return type afterwards
+type newAssign = ReturnType<typeof createNewAssign>
+
+// This way, if we change the function, it will automatically update the return type
+// The next utility type follows the same theme (derives the type from a function)
+
+
+// 8. Parameters
+
+// This time, we'll derive a type from the parameters of a function
+type assignParams = Parameters<typeof createNewAssign>
