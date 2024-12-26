@@ -243,6 +243,8 @@ Then, run `npm create vite@latest` to start a new Vite project.
   - if a `package-lock.json` file exists, it uses that to ensure consistent installations across
   different environments.
 - `npm run dev` to start up our local development server
+- you can ctrl + click on the provided http://localhost:5173/ link to access your minimal Vite app
+
 
 # Chapter 11 - 
 
