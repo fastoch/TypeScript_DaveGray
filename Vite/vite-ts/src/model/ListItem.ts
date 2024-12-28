@@ -15,7 +15,7 @@ export default class ListItem implements Item {
   // no need to have any assignment between the curly braces because already done when passing
   // the parameters to the constructor
 
-  // we still need to implement our interface with getters & setters
+  // we still need to implement our interface properties with getters & setters
   get id(): string {
     return this._id
   }
