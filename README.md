@@ -1,4 +1,8 @@
-src = https://courses.davegray.codes/view/courses/web-dev-roadmap-for-beginners/1702900-industry-tools/5527326-typescript
+src: 
+- https://courses.davegray.codes/view/courses/web-dev-roadmap-for-beginners/1702900-industry-tools/5527326-typescript
+- https://github.com/gitdagray/typescript-course
+
+---
 
 # Introduction
 
@@ -260,7 +264,55 @@ More about Vite: https://vite.dev/guide/
 
 # Chapter 11 - TypeScript Project
 
-see `lesson11.ts` + dedicated `Vite` folder.
+see dedicated **Vite** folder.  
+
+## Project setup
+
+We'll be building a simple list application.
+- add an item to the list
+- check items off of the list (checkbox)
+- delete an item
+- clear the entire list
+
+The first thing you're going to need is **Node.js**
+- Run `node -v` to check if already installed. 
+- On Arch Linux, run `sudo pacman -S nodejs` to install it.
+
+We also need **npm** (node package manager).
+- Verify version via `npm -v` and install via `sudo pacman -S npm`.
+
+To start our first TS project we will use **Vite**.
+- Open a dedicated empty folder in VS Code. 
+- Open a terminal window in VS Code and run `npm create vite@latest`.
+- Name your project (**vite-ts** in our case). 
+- Choose *Vanilla JS*
+- Then choose *TypeScript*
+- `cd` into your project folder (the one named after your project)
+- run `npm install` to install all dependencies listed in your **package.json** file 
+- Finally, run `npm run dev` to start your local development server
+- you can Ctrl + click on the provided http://localhost:5173/ link to access your minimal Vite app
+
+## Starter code modifications
+
+In the **src** folder, we can **delete** the pre-existing **counter.ts** file.  
+Comment out the setupCounter lines in your **main.ts** file.  
+
+Also create a **css** folder in this **src** folder and move your **style.css** to this **css** folder.  
+And modify the first line to that: `import './CSS/style.css'`  
+
+We can also **delete** the **typescript.svg** file and delete corresponding lines in **main.ts**  
+
+The **vite-env.d.ts** file is where you would put the types for the environment variables that you might create.  
+
+After that, we can **delete vite.svg** from the **public** directory.  
+And then comment out or delete the viteLogo lines in our **main.ts** file.  
+
+We will overwrite the pre-existing code in the **index.html** file with what you can find here:
+https://github.com/gitdagray/typescript-course/blob/main/lesson11/index.html  
+
+The commented out list items in the **index.html** file are just examples of what we will generate with our TypeScript.  
+
+
 
 ---
 
