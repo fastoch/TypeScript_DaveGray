@@ -37,10 +37,19 @@ export default class FullList implements List {
   }
 
   removeItem(id: string): void {
-    
+    this._list = this._list.filter(item => item.id !== id)
+    this.save()
   }
 
   load(): void {
+    const storedList: string | null = localStorage.getItem("myList")
+    if (typeof storedList !== "string") return  // do not go any further if storedList is not a string
 
+    // otherwise, parse the stored list to build an array of list items:
+    const parsedList: { _id: string, _item: string, _checked: boolean }[] = JSON.parse(storedList)
+
+    parsedList.forEach(itemObj => {
+      const newListItem = 
+    })
   }
 }
