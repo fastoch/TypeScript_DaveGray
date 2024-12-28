@@ -248,19 +248,19 @@ Then, run `npm create vite@latest` to start a new Vite project.
 - Select a framework (we'll go with *Vanilla* here)
 - Then you can choose between JS and TS, we'll pick TS
 - Once your Vite project folder gets created, run: 
-  - `cd vite-ts` to navigate to your project folder
-  - `npm install` to install all dependencies listed in the `package.json` file to the local
-  `node_modules` folder.
+  - `cd vite-ts` to navigate to your project folder (cd = change directory)
+  - `npm install` to install all dependencies listed in the `package.json` file 
+    - these dependencies are installed to the local `node_modules` folder.
   - if a `package-lock.json` file exists, it uses that to ensure consistent installations across
   different environments.
 - `npm run dev` to start up our local development server
-- you can ctrl + click on the provided http://localhost:5173/ link to access your minimal Vite app
+- you can Ctrl + click on the provided http://localhost:5173/ link to access your minimal Vite app
 
 More about Vite: https://vite.dev/guide/ 
 
 # Chapter 11 - TypeScript Project
 
-see `lesson11.ts`
+see `lesson11.ts` + dedicated `Vite` folder.
 
 ---
 
