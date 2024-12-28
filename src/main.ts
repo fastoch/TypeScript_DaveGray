@@ -148,7 +148,7 @@ enum Grade {
 }
 
 
-// -------------LESSON 04 Functions--------------------------
+// -------------------LESSON 04 Functions--------------------------
 
 // In the previous chapter, we introduced Type Aliases 
 type strOrNum = string | number 

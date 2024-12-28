@@ -21,6 +21,14 @@ It will guide you through learning the TS fundamentals and building two complete
 Save the React chapters until AFTER you have learned React from the course below:
 https://courses.davegray.codes/view/courses/web-dev-roadmap-for-beginners/1702941-frontend-web-dev/5379426-react-js
 
+---
+
+>[!important]
+>For the 5 first chapters (or lessons), we'll only use a `main.ts` file.   
+>From chapter 6, we use dedicated files like lesson06.ts, lesson07.ts, ...
+
+---
+
 # Chapter 1
 
 Official TypeScript website: https://www.typescriptlang.org/  
@@ -135,6 +143,7 @@ Being aware of type errors at compile time prevents us from facing errors at run
 To prevent from compiling our TS code to JS code when having type errors, we can uncomment the following line in **tsconfig.json**:  
 - `"noEmitOnError": true,`  
 
+
 # Chapter 2 - Basic types
 
 ## Introduction
@@ -168,6 +177,7 @@ Or it can be done explicitly, by expressly specifying the type.
 
 It's completeley okay to take advantage of TS's type inference, but as we learn it's recommended to be explicit.
 
+
 # Chapter 3 - Arrays & Objects
 
 - Arrays
@@ -177,6 +187,7 @@ It's completeley okay to take advantage of TS's type inference, but as we learn 
   - Optional properties
 - Interfaces
 - Enums
+
 
 # Chapter 4 - Functions
 
@@ -188,6 +199,7 @@ It's completeley okay to take advantage of TS's type inference, but as we learn 
 - rest parameters
 - the 'never' type
 - custom type guard
+
 
 # Chapter 5 - Type Assertions
 
@@ -201,8 +213,6 @@ and does not rebuild the code at runtime.
 
 Basically, we're telling the TS compiler that we know better, that it needs to listen to us regarding the type of a given variable.
 
->[!important]
->For the 5 first chapters (or lessons), we only used a `main.ts` file. 
 
 # Chapter 6 - Classes
 
@@ -223,6 +233,7 @@ See `lesson09.ts`
 # Chapter 10 - Vite.js + TypeScript
 
 See dedicated `Vite` folder.  
+
 Vite.js was first released on April 20, 2020.  
 
 To use Vite, you first need to install Node.js  
@@ -249,7 +260,7 @@ More about Vite: https://vite.dev/guide/
 
 # Chapter 11 - TypeScript Project
 
-
+see `lesson11.ts`
 
 ---
 
