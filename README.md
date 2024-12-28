@@ -222,17 +222,21 @@ Basically, we're telling the TS compiler that we know better, that it needs to l
 
 See `lesson06.ts`
 
+
 # Chapter 7 - Index Signatures & keyof Assertions
 
 See `lesson07.ts`
+
 
 # Chapter 8 - Generics
 
 See `lesson08.ts`
 
+
 # Chapter 9 - Utility Types
 
 See `lesson09.ts`
+
 
 # Chapter 10 - Vite.js + TypeScript
 
@@ -261,6 +265,7 @@ Then, run `npm create vite@latest` to start a new Vite project.
 - you can Ctrl + click on the provided http://localhost:5173/ link to access your minimal Vite app
 
 More about Vite: https://vite.dev/guide/ 
+
 
 # Chapter 11 - TypeScript Project
 
@@ -295,24 +300,25 @@ To start our first TS project we will use **Vite**.
 ## Starter code modifications
 
 In the **src** folder, we can **delete** the pre-existing **counter.ts** file.  
-Comment out the setupCounter lines in your **main.ts** file.  
+We can also **delete** the **typescript.svg** file.
 
 Also create a **css** folder in this **src** folder and move your **style.css** to this **css** folder.  
-And modify the first line to that: `import './CSS/style.css'`  
-
-We can also **delete** the **typescript.svg** file and delete corresponding lines in **main.ts**  
+And modify the first line of the *main.ts* file to that: `import './css/style.css'`  
 
 The **vite-env.d.ts** file is where you would put the types for the environment variables that you might create.  
 
 After that, we can **delete vite.svg** from the **public** directory.  
-And then comment out or delete the viteLogo lines in our **main.ts** file.  
 
-We will overwrite the pre-existing code in the **index.html** file with what you can find here:
+We will overwrite the pre-existing code in the **index.html** file with what you can find here:  
 https://github.com/gitdagray/typescript-course/blob/main/lesson11/index.html  
 
 The commented out list items in the **index.html** file are just examples of what we will generate with our TypeScript.  
 
+We'll also overwrite the contents of in the **style.css** file with the following:  
+https://github.com/gitdagray/typescript-course/blob/main/lesson11/src/css/style.css
 
+Now that the HTML and CSS are taken care of, we can focus on our TS code.  
+In the *main.ts* file, delete everything except the first line: `import './css/style.css'`
 
 ---
 
