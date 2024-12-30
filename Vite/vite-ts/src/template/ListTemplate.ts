@@ -35,8 +35,35 @@ export default class ListTemplate implements DOMList {
       li.className = "item"
 
       // now let's create what's inside this list item element (checkbox, label, and button)
+
+      // The checkbox
       const check = document.createElement("input")
       check.type = "checkbox"
+      check.id = item.id
+      check.checked = item.checked
+      li.append(check)
+
+      // changing the checkbox state and saving it to local storage
+      check.addEventListener('change', () => {
+        item.checked = !item.checked
+        fullList.save()
+      })
+
+      // The label
+      const label = document.createElement("label")
+      label.htmlFor = item.id
+      label.textContent = item.item
+      li.append(label)
+
+      // The button
+      const button = document.createElement("button")
+      button.textContent = "Delete"
+      li.append(button)
+
+      button.addEventListener('click', () => {
+        
+      })
+
     })
     // see examples of list items from line 39 to 55 in the index.html file
   }
