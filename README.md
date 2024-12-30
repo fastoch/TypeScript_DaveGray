@@ -299,15 +299,15 @@ To start our first TS project we will use **Vite**.
 
 ## Starter code modifications
 
-In the **src** folder, we can **delete** the pre-existing **counter.ts** file.  
-We can also **delete** the **typescript.svg** file.
+In the **src** folder, we can delete the pre-existing **counter.ts** file.  
+We can also delete the **typescript.svg** file.
 
 Also create a **css** folder in this **src** folder and move your **style.css** to this **css** folder.  
-And modify the first line of the *main.ts* file to that: `import './css/style.css'`  
+And modify the first line of the **main.ts** file to that: `import './css/style.css'`  
 
 The **vite-env.d.ts** file is where you would put the types for the environment variables that you might create.  
 
-After that, we can **delete vite.svg** from the **public** directory.  
+After that, we can delete **vite.svg** from the **public** directory.  
 
 We will overwrite the pre-existing code in the **index.html** file with what you can find here:  
 https://github.com/gitdagray/typescript-course/blob/main/lesson11/index.html  
@@ -319,6 +319,22 @@ https://github.com/gitdagray/typescript-course/blob/main/lesson11/src/css/style.
 
 Now that the HTML and CSS are taken care of, we can focus on our TS code.  
 In the *main.ts* file, delete everything except the first line: `import './css/style.css'`
+
+## Starting our project
+
+We will start by creating a data model for the list items.  
+Inside of the **src** directory > create a **model** directory.  
+Inside of this **model** directory, we'll create a new file = **ListItem.ts**.  
+
+After that, we'll create another model for our full list.  
+Inside of the **model** directory, create a **FullList.ts** file.  
+
+So far, we've created a ListItem class and a FullList class (that is a singleton),  
+and we've populated them with data and methods as needed.  
+
+Now, we're ready to move on to our **template**.  
+Inside the **src** directory, we'll create a **template** directory.  
+And inside the **template** folder, we'll create one file = **ListTemplate.ts**.
 
 ---
 

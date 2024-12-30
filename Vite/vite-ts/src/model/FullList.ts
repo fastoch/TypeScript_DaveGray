@@ -42,16 +42,16 @@ export default class FullList implements List {
   }
 
   load(): void {
-    // try and retrieve our list from local storage
+    // try and retrieve our list from local storage (format = JSON string)
     const storedList: string | null = localStorage.getItem("myList")
 
     // do not go any further if storedList is not a string
     if (typeof storedList !== "string") return  
 
-    // otherwise, parse the stored list (convert the JSON string into an array of JS objects):
+    // otherwise, parse the stored list (convert the JSON string into an array of objects):
     const parsedList: { _id: string, _item: string, _checked: boolean }[] = JSON.parse(storedList)
 
-    // with every item in this array, populate our unique FullList instance
+    // for every item in this array, create a new ListItem object and populate our FullList instance
     parsedList.forEach(itemObj => {
       const newListItem = new ListItem(itemObj._id, itemObj._item, itemObj._checked)
       FullList.instance.addItem(newListItem)  
