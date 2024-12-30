@@ -32,9 +32,10 @@ export default class ListTemplate implements DOMList {
     fullList.list.forEach(item => {
       // create a list item element
       const li = document.createElement("li") 
-      li.className = "item"
+      li.className = "item" // refers to the CSS class name
 
       // now let's create what's inside this list item element (checkbox, label, and button)
+      // see examples of list items from line 39 to 55 in the index.html file
 
       // The checkbox
       const check = document.createElement("input")
@@ -43,7 +44,6 @@ export default class ListTemplate implements DOMList {
       check.checked = item.checked
       li.append(check)
 
-      // changing the checkbox state and saving it to local storage
       check.addEventListener('change', () => {
         item.checked = !item.checked
         fullList.save()
@@ -57,15 +57,19 @@ export default class ListTemplate implements DOMList {
 
       // The button
       const button = document.createElement("button")
-      button.textContent = "Delete"
+      button.className = "button" // refers to the CSS class name
+      button.textContent = "X"
       li.append(button)
 
       button.addEventListener('click', () => {
-        
+        fullList.removeItem(item.id)
+        // The removeItem() method from FullList.ts also saves the list
+        this.render(fullList)
       })
 
+      // Each list item needs to be added to the unordered list (the parent element)
+      this.ul.append(li)
     })
-    // see examples of list items from line 39 to 55 in the index.html file
   }
 }
 

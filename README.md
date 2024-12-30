@@ -336,6 +336,12 @@ Now, we're ready to move on to our **template**.
 Inside the **src** directory, we'll create a **template** directory.  
 And inside the **template** folder, we'll create one file = **ListTemplate.ts**.
 
+## main.ts
+
+With all of our classes complete (ListItem, FullList and ListTemplate), we're now ready to pull  
+our app together inside of the **main.ts** file.  
+
+
 ---
 
 # Chapter 12 - React + TypeScript
