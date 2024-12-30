@@ -25,7 +25,20 @@ export default class ListTemplate implements DOMList {
   }
 
   render(fullList: FullList): void {
-    
+    this.clear() // clear what is already there to avoid duplicates
+
+    // fullList is the unique instance of FullList while list is an array of ListItem objects
+    // for each item in our list, create an HTML list element along with all required elements
+    fullList.list.forEach(item => {
+      // create a list item element
+      const li = document.createElement("li") 
+      li.className = "item"
+
+      // now let's create what's inside this list item element (checkbox, label, and button)
+      const check = document.createElement("input")
+      check.type = "checkbox"
+    })
+    // see examples of list items from line 39 to 55 in the index.html file
   }
 }
 
