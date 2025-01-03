@@ -28,7 +28,7 @@ https://courses.davegray.codes/view/courses/web-dev-roadmap-for-beginners/170294
 ---
 
 >[!important]
->For the 5 first chapters (or lessons), we'll only use a `main.ts` file.   
+>For the 5 first chapters (or lessons), we'll only use a `main.ts` file (inside the src folder).   
 >From chapter 6, we use dedicated files like lesson06.ts, lesson07.ts, ...
 
 ---
@@ -240,7 +240,7 @@ See `lesson09.ts`
 
 # Chapter 10 - Vite.js + TypeScript
 
-See dedicated `Vite` folder.  
+See dedicated **Vite** folder.  
 
 Vite.js was first released on April 20, 2020.  
 
@@ -341,6 +341,20 @@ And inside the **template** folder, we'll create one file = **ListTemplate.ts**.
 With all of our classes complete (ListItem, FullList and ListTemplate), we're now ready to pull  
 our app together inside of the **main.ts** file.  
 
+Review:
+- We start the app with our `initApp()` function.
+  - We get the instance of the FullList (data) and the ListTemplate (display)
+  - We put a listener on our itemEntryForm to add new items (submit event)
+  - We also have a listener for our 'Clear Items' button
+  - Finally, we load the list, and render the list on the Web page
+- After our `initApp()` function, we add a listener to the DOM (document) and we run our app once the web page has loaded
+
+To test this basic Vite application:  
+- open a terminal window 
+- cd into your project's folder
+- run `npm run dev`
+- ctrl + click on http://localhost:5173/
+
 
 ---
 
@@ -348,6 +362,8 @@ our app together inside of the **main.ts** file.
 
 Chapters 1-11 were for learning TypeScript fundamentals and chapters 12-17 cover TypeScript with React.  
 Save the React chapters until AFTER you have learned React.
+
+
 
 
 ---

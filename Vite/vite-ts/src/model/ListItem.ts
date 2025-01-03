@@ -10,7 +10,7 @@ export default class ListItem implements Item {
   constructor(
     private _id: string = '',  // the underscore is there to indicate it's a private property
     private _item: string = '',
-    private _checked: boolean = false
+    private _checked: boolean = false  
   ) {} 
   // no need to have any assignment between the curly braces because already done when passing
   // the parameters to the constructor
