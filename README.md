@@ -355,6 +355,11 @@ To test this basic Vite application:
 - run `npm run dev`
 - ctrl + click on http://localhost:5173/
 
+Test the different features: 
+- add items, 
+- clear entire list, 
+- delete one item, 
+- tick checkboxes to cross items off the list
 
 ---
 
