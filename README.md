@@ -299,6 +299,8 @@ To start our first TS project we will use **Vite**.
 
 ## Starter code modifications
 
+When using Vite to initialize a new TS project, it generates various folders and files for us = the starter code.  
+
 In the **src** folder, we can delete the pre-existing **counter.ts** file.  
 We can also delete the **typescript.svg** file.
 
@@ -322,19 +324,34 @@ In the *main.ts* file, delete everything except the first line: `import './css/s
 
 ## Starting our project
 
+### ListItem.ts
+
+This file typically will define the structure and behavior of individual items in our shopping list.  
+
 We will start by creating a data model for the list items.  
 Inside of the **src** directory > create a **model** directory.  
 Inside of this **model** directory, we'll create a new file = **ListItem.ts**.  
 
+### FullList.ts
+
+This file will manage the entire collection of shopping list items.   
+
 After that, we'll create another model for our full list.  
 Inside of the **model** directory, create a **FullList.ts** file.  
+
+### ListTemplate.ts
 
 So far, we've created a ListItem class and a FullList class (that is a singleton),  
 and we've populated them with data and methods as needed.  
 
 Now, we're ready to move on to our **template**.  
 Inside the **src** directory, we'll create a **template** directory.  
-And inside the **template** folder, we'll create one file = **ListTemplate.ts**.
+And inside the **template** folder, we'll create one file = **ListTemplate.ts**.  
+
+The purpose of this file is to handle the presentation layer of the shopping list.  
+It focuses on rendering the list and its items in the user interface.  
+
+This separation is important because it ensures that UI-related logic is kept separate from data management logic (FullList.ts) and individual item logic (ListItem.ts).
 
 ## main.ts
 
